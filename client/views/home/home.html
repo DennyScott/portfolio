@@ -1,40 +1,43 @@
 <template name="home">
 	<div class="jumbotron">
-		<h1 class="brand-name">Moonlite Studios</h1>
+		<div class="center">
+			<h1 class="brand-name center">Moonlite Studio</h1>
+			<p><span class="center">Some sort of tagline here</span></p>
+		</div>
 	</div>
 	<nav class="col-xs-12 align-center who-list">
-		<a class="what selected">
-			Work
+		<a class="what selected" id="web">
+			Web
 		</a>
-		<a class="who">
-			Team
+		<a class="who" id="games">
+			Games
 		</a>
 	</nav>
-	<div id="work-content">
-		<div class="square-content">
-			<div class="container">
-				Content
-			</div>
+	<div id="web-content">
+		<div id="slogan" class="center">
+			Some sort of Web Slogan.
 		</div>
-		<div class="square-content">
-			<div class="container">
-				Content
-			</div>
-		</div>
-		<div class="square-content">
-			<div class="container">
-				Content
-			</div>
-		</div>
-		<div class="square-content">
-			<div class="container">
-				Content
-			</div>
-		</div>
-		<div class="square-content" id="test">
-			<div class="container">
-				Content
-			</div>
+		<div id="work-content">
+			{{> project}}
+			{{> project}}
+			{{> project}}
+			{{> project}}
+			{{> project}}
+			{{> project}}
 		</div>
 	</div>
+	<div id="game-content">
+		<div id="slogan" class="center">
+			It's always funner with a friend.
+		</div>
+		<div id="work-content">
+			{{> project}}
+			{{> project}}
+			{{> project}}
+			{{> project}}
+			{{> project}}
+			{{> project}}
+		</div>
+	</div>
+
 </template>

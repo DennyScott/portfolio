@@ -4,20 +4,18 @@
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
       <span class="sr-only">Toggle navigation</span>
     </button>
-    <a class="navbar-brand" href="#">Moonlite</a>
+    <a class="navbar-brand" href="{{pathFor 'home'}}">Moonlite</a>
   </div>
   <div class="collapse navbar-collapse" id="navbar-collapse-01">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#fakelink">Products</a></li>
-      <li><a href="#fakelink">Features</a></li>
+      <li class="active"><a href="{{pathFor 'home'}}">Our Work</a></li>
+      <li><a href="#fakelink">Who are We?</a></li>
+      <li><a href="#fakelink">Blog</a></li>
     </ul>
-    <form class="navbar-form navbar-right" action="#" role="search">
-      <div class="form-group">
-        <div class="input-group">
-          
-        </div>
-      </div>
-    </form>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="{{pathFor 'entrySignIn'}}">Sign In</a></li>
+      <li><a href="{{pathFor 'entrySignUp'}}">Sign Up</a></li>
+    </ul>
   </div><!-- /.navbar-collapse -->
 </nav><!-- /navbar -->
 </template>

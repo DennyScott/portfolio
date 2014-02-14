@@ -3,7 +3,7 @@
 	margin: auto 0;
 }
 
-.brand-name{
+.center{
 	text-align: center;
 }
 
@@ -19,13 +19,6 @@
 	border:0;
 	vertical-align: baseline;
 }
-
-/*.who-list li {
-	float:left;
-	width: 150px;
-	margin: 0 0 0 0;
-	list-style: none;
-}*/
 
 .who-list a{
 	width: 168px;
@@ -90,6 +83,23 @@
 	margin-top:0px;
 }
 
-.square-content{
-	height: 400px;
+#work-content {
+	margin-bottom:100px;
+}
+
+#game-content{
+	display:none;
+	-webkit-transition: color 500ms ease;
+	-moz-transition: color 500ms ease;
+	-ms-transition: color 500ms ease;
+	-o-transition: color 500ms ease;
+	transition: color 500ms ease;
+}
+
+#web-content{
+	-webkit-transition: color 500ms ease;
+	-moz-transition: color 500ms ease;
+	-ms-transition: color 500ms ease;
+	-o-transition: color 500ms ease;
+	transition: color 500ms ease;
 }

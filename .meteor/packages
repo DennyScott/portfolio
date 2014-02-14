@@ -9,3 +9,6 @@ insecure
 preserve-inputs
 bootstrap-3
 iron-router
+accounts-entry
+accounts-ui
+accounts-password

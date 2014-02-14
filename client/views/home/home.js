@@ -2,7 +2,6 @@
 
 Template.home.rendered = function () {
 	waypoints();
-	console.log($('#test'));
 
 		$('#test').waypoint(function(direction){
 			alert('You hit this waypoint');
@@ -13,3 +12,19 @@ Template.home.rendered = function () {
 	// 	console.log("hello");
 	// });
 };
+
+Template.home.events({
+	'click #games': function () {
+		$('#web-content').css("display","none");
+		$('#game-content').css("display","inline");
+		$('#games').addClass("selected");
+		$('#web').removeClass("selected");
+	},
+
+	'click #web': function () {
+		$('#web-content').css("display","inline");
+		$('#game-content').css("display","none");
+		$('#web').addClass("selected");
+		$('#games').removeClass("selected");
+	}
+});
