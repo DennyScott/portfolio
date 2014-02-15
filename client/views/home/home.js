@@ -2,6 +2,7 @@
 
 Template.home.rendered = function () {
 	waypoints();
+	new WOW().init();
 
 		$('#test').waypoint(function(direction){
 			alert('You hit this waypoint');

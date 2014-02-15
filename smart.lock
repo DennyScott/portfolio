@@ -5,7 +5,8 @@
       "bootstrap-3": {},
       "iron-router": {},
       "accounts-entry": {},
-      "fast-render": {}
+      "fast-render": {},
+      "wow": {}
     },
     "packages": {
       "bootstrap-3": {
@@ -27,6 +28,11 @@
         "git": "https://github.com/arunoda/meteor-fast-render.git",
         "tag": "v0.1.15",
         "commit": "baf79a3e5863acc3abfe2d0d62fb23b21fe880de"
+      },
+      "wow": {
+        "git": "https://github.com/noorderstorm/meteor-wow.git",
+        "tag": "v0.1.3",
+        "commit": "f5e0e3fbb123c1e19f236123f52d93eea4716001"
       },
       "just-i18n": {
         "git": "https://github.com/subhog/meteor-just-i18n.git",
