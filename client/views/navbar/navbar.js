@@ -7,3 +7,9 @@ Template.navbar.helpers({
 		return Meteor.user().emails[0].address;
 	}
 });
+
+Template.navbar.events({
+	'click #sign-out': function () {
+		Meteor.logout();
+	}
+});
