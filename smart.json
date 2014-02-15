@@ -4,6 +4,7 @@
     "iron-router": {},
     "accounts-entry": {},
     "fast-render": {},
-    "wow": {}
+    "wow": {},
+    "blog": {}
   }
 }

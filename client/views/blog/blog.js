@@ -1,0 +1,3 @@
+Template.blogIndex.created = function () {
+	
+};
