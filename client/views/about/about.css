@@ -80,3 +80,29 @@ video{
 	filter:alpha(opacity=20); /* For IE8 and earlier */
 	z-index:1;
 }
+
+.profile-picture{
+	margin:0 auto;
+	max-width:300px;
+}
+
+.picture-row {
+	text-align:center;
+	margin:0 auto;
+	margin-top:40px;
+}
+
+.user-info {
+	margin:0 auto;
+	text-align:center;
+}
+
+.bio{
+	margin-top:40px;
+	padding-left:40px;
+	padding-right:40px;
+}
+
+.user-info.other-info {
+	font-size:.75em;
+}

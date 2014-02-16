@@ -4,18 +4,7 @@
 			<div class="person col-xs-12">
 				<div id="denny-video" class="background-video"></div>
 				<i class="fa fa-angle-right directionButton" id="about-right"></i>
-				<div class="col-xs-6 col-md-3">
-					<a href="#" class="thumbnail">
-						<img src="/images/SVG/earth.svg" />
-					</a>
-				</div>
-
-				<div class="col-md-3 col-xs-12">
-					This is some other data
-				</div>
-				<div class="col-md-6 background-video" >
-
-				</div>
+				{{> user-details}}
 			</div>
 		</div>
 
@@ -23,19 +12,17 @@
 			<div class="person col-xs-12" >
 				<i class="fa fa-angle-left directionButton" id="about-left"></i>
 				<i class="fa fa-angle-right directionButton" id="about-right"></i>
-				<div class="row">
-					Denny Scott
-				</div>
+				{{> user-details}}
 			</div>
 		</div>
 
 		<div class="section" id="section3">
 			<div class="person col-xs-12">
 				<i class="fa fa-angle-left directionButton" id="about-left"></i>
-				Some info
+				{{> user-details}}
 			</div>
 		</div>
 	</div>
-<div class="clear"></div>
+	<div class="clear"></div>
 
 </template>
