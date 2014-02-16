@@ -3,22 +3,24 @@
 		<div class="section" id="section1">
 			<div class="person col-xs-12">
 				<div id="denny-video" class="background-video"></div>
-				<i class="fa fa-angle-right directionButton" id="about-right"></i>
+				<a href="#section2" class="moveAbout"><i class="fa fa-angle-right directionButton" id="about-right"></i></a>
 				{{> user-details}}
 			</div>
 		</div>
 
 		<div class="section" id="section2">
 			<div class="person col-xs-12" >
-				<i class="fa fa-angle-left directionButton" id="about-left"></i>
-				<i class="fa fa-angle-right directionButton" id="about-right"></i>
+				<div id="travis-video" class="background-video"></div>
+				<a href="#section1" class="moveAbout"><i class="fa fa-angle-left directionButton" id="about-left"></i></a>
+				<a href="#section3" class="moveAbout"><i class="fa fa-angle-right directionButton" id="about-right"></i></a>
 				{{> user-details}}
 			</div>
 		</div>
 
 		<div class="section" id="section3">
 			<div class="person col-xs-12">
-				<i class="fa fa-angle-left directionButton" id="about-left"></i>
+				<div id="adam-video" class="background-video"></div>
+				<a href="#section2" class="moveAbout"><i class="fa fa-angle-left directionButton" id="about-left"></i></a>
 				{{> user-details}}
 			</div>
 		</div>
