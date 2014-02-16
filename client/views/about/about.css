@@ -8,7 +8,7 @@
 }
 
 #about-page{
-	width:12000px;
+	width:6000px;
 	margin-top:40px;
 }
 
@@ -30,4 +30,34 @@
 
 html,body{
 	height:auto!important;
+}
+
+.directionButton {
+	font-size:64px;
+}
+
+#about-left{
+	position:absolute;
+	top:40%;
+	left:20px;
+	cursor:pointer;
+	transition: left .2s;
+	-webkit-transition: left .2s; /* Safari */
+}
+
+#about-left:hover{
+	left:10px;
+}
+
+#about-right{
+	position:absolute;
+	top:40%;
+	right:20px;
+	cursor:pointer;
+	transition: right .2s;
+	-webkit-transition: right .2s; /* Safari */
+}
+
+#about-right:hover{
+	right:10px;
 }

@@ -9,7 +9,8 @@
       "wow": {},
       "blog": {},
       "profile": {},
-      "voltage": {}
+      "voltage": {},
+      "font-awesome": {}
     },
     "packages": {
       "bootstrap-3": {
@@ -51,6 +52,11 @@
         "git": "https://github.com/BeDifferential/meteor-voltage.git",
         "tag": "v0.0.3",
         "commit": "874873a779c2fd26ea117db9ba984707d70f4401"
+      },
+      "font-awesome": {
+        "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
+        "tag": "v4.0.3",
+        "commit": "61e9361384347547ae144f8228faa4deffda23db"
       },
       "just-i18n": {
         "git": "https://github.com/subhog/meteor-just-i18n.git",
