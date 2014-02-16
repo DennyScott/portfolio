@@ -4,4 +4,6 @@
 
 .dropdown-menu{
 	background-color:#fafafa!important;
+	z-index:20;
 }
+
