@@ -1,0 +1,33 @@
+.person {
+	background-color:#fafafa;
+	margin-top: 20px;
+	border-radius:20px;
+	padding: 20px;
+	float:left;
+	min-height:470px;
+}
+
+#about-page{
+	width:12000px;
+	margin-top:40px;
+}
+
+.section {
+	width:1020px;
+	float:left;
+	margin-bottom:0px;
+	margin-left:30px;
+	margin-right:30px;
+}
+
+.clear{
+	clear:both;
+}
+
+#section3{
+	padding-right:30px;
+}
+
+html,body{
+	height:auto!important;
+}

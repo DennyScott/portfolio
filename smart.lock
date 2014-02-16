@@ -8,7 +8,8 @@
       "fast-render": {},
       "wow": {},
       "blog": {},
-      "profile": {}
+      "profile": {},
+      "voltage": {}
     },
     "packages": {
       "bootstrap-3": {
@@ -45,6 +46,11 @@
         "git": "https://github.com/BeDifferential/meteor-profile.git",
         "tag": "v0.0.8",
         "commit": "a79eed39b871d4c384b76d77b78e318eb2f300fd"
+      },
+      "voltage": {
+        "git": "https://github.com/BeDifferential/meteor-voltage.git",
+        "tag": "v0.0.3",
+        "commit": "874873a779c2fd26ea117db9ba984707d70f4401"
       },
       "just-i18n": {
         "git": "https://github.com/subhog/meteor-just-i18n.git",
