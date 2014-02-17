@@ -4,4 +4,9 @@
 
 #meteor-blog {
 	padding-top:40px!important;
+	opacity:0;
+}
+
+#blogIndexLoop {
+	opacity:0;
 }

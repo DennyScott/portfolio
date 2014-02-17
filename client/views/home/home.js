@@ -9,9 +9,11 @@ Template.home.rendered = function () {
 			$('#test').waypoint('destroy');
 		}, {offset: '75%'});
 
-	// $('#test').bind('scroll', function(){
-	// 	console.log("hello");
-	// });
+		fadeIn($('#home-content'));
+};
+
+Template.home.destroyed = function () {
+	removeFade();
 };
 
 Template.home.events({

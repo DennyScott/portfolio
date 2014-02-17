@@ -103,3 +103,6 @@
 	-o-transition: color 500ms ease;
 	transition: color 500ms ease;
 }
+#home-content{
+	opacity:0;
+}
