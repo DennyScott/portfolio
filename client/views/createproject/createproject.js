@@ -39,6 +39,28 @@ Template.createproject.events({
 			download: $('#download').val()
 
 		}
+
 		Meteor.call("project", project, function(){});
+
+		var callback = getURL();
+		var context = this;
+
+				var files = $('#address').files;
+				_.each(files,function(file){
+					var reader = new FileReader;
+					var fileData = {
+						name:file.name,
+						size:file.size,
+						type:file.type
+					};
+
+					reader.onload = function () {
+						fileData.data = new Uint8Array(reader.result);
+						Meteor.call("S3upload",fileData,context,callback);
+					};
+
+					reader.readAsArrayBuffer(file);
+
+				});
 	}
 });
