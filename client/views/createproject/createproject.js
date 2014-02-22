@@ -53,19 +53,9 @@ Template.createproject.events({
 		};
 
 		var projectID = Meteor.call("project", project, function(){});
+
+		Meteor.timeout(function(){},5);
 		Router.go("/");
 	}
 });
 
-function uploadData(selector, path, template){
-	var file = template.find(selector).files[0];
-	sf.upload(file, {
-		file: file.name,
-		path : path
-	},function(err, res){
-		if(err)
-			console.log(err);
-	});
-
-	return file.name;
-}
