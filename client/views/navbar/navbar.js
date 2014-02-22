@@ -13,6 +13,12 @@ Template.navbar.helpers({
 		if(!prof){
 			Meteor.call('profile', {}, function (error, result) {});
 		}
+	},
+
+	"active":function(path){
+		if(Router.current().path === path){
+			return "active";
+		}
 	}
 });
 
