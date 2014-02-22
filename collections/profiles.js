@@ -11,6 +11,7 @@ Meteor.methods({
 			title: "",
 			bio: "",
 			github: "",
+			linkedIn: "",
 			joined: new Date().getTime(),
 			image: "",
 			userId: user._id
