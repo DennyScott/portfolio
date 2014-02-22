@@ -83,6 +83,7 @@ Template.manageproject.events({
 				console.log(error.reason);
 			}
 		});
+		Router.go("/");
 	},
 
 	'click #delBtn': function () {

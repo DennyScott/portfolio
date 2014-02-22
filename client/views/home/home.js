@@ -34,9 +34,9 @@ Template.home.events({
 
 Template.home.helpers({
 	game: function() {
-		return Projects.find({type: 'Game'});
+		return Projects.find({$or: [{type: 'Game'}, {type: 'Web Game'}]});
 	},
 	web: function() {
-		return Projects.find({type: 'Web'});
+		return Projects.find({$or: [{type: 'Web'}, {type: 'Web Game'}]});
 	}
 })
