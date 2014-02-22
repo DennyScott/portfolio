@@ -1,0 +1,75 @@
+<template name="manageproject">
+	<div id="createproject-content">
+		<div class="container">
+			<h1 class="center createHeader">Manage Project</h1>
+			<form id="create-project">
+				<div class="row">
+					<div class="col-md-offset-3 col-md-6">
+						<div class="form-group">
+							{{text_field 'projectName'}}
+						</div>
+					</div>
+				</div>
+					<div class="row">
+					<div class="col-md-offset-3 col-md-6">
+						<div class="form-group">
+							{{text_field 'teamMembers'}}
+						</div>
+					</div>
+
+					<div class="row">
+					<div class="col-md-offset-3 col-md-6">
+						<div class="form-group">
+							{{text_field 'github'}}
+						</div>
+					</div>
+				</div>
+
+					<div class="row">
+					<div class="col-md-offset-3 col-md-6">
+						<div class="form-group">
+							{{text_field 'url'}}
+						</div>
+					</div>
+				</div>
+
+					<div class="row">
+					<div class="col-md-offset-3 col-md-6">
+						<div class="form-group">
+							{{text_field 'download'}}
+						</div>
+					</div>
+				</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-offset-3 col-md-3">
+						<div class="form-group">
+							<label for="address">Image</label>
+
+								<input type="file" id="address" name="address" value="" class="">
+						</div>
+					</div>
+				
+					<div class="col-md-3">
+						<div class="form-group">
+							<label for="checkbox">Type</label>
+							<br>
+							<input type="checkbox" name="type" id = "web-check" value="Web">Web
+							<input type="checkbox" name="type" id = "game-check" value="Game">Game
+						</div>
+					</div>
+				</div>
+				<div class="row">
+				<div class=" col-md-offset-3 col-md-6 form-group">
+					{{text_area 'description'}}
+				</div>
+			</div>
+			<div class="row center">
+				<input type="submit" value = "Edit Project" class="btn btn-primary">
+				<input type = "button" value="Delete" class="btn btn-danger">
+			</div>
+			</form>
+		</div>
+	</div>
+</template>

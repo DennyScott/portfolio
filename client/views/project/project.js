@@ -4,3 +4,9 @@ Template.project.helpers({
 
 	}
 });
+
+Template.project.events({
+  'click #projectPage' : function () {
+    Router.go('manageproject', {"_id": this._id});
+  }
+});
