@@ -1,4 +1,4 @@
-<template name="editprofile">
+<template name="profile">
 	<div id="profile-content">
 		<div class="container">
 			<h1 class="center createHeader">Profile</h1>
@@ -6,20 +6,21 @@
 				<div class="row">
 					<div class="col-md-offset-3 col-md-3">
 						<div class="form-group">
-							{{text_field 'firstName'}}
+							<label for="firstName">First name</label>
+							<input type="text" id="firstName" name="firstName" value="" class="form-control">
 						</div>
 					</div>
 
 					<div class="col-md-3">
 						<div class="form-group">
-							{{text_field 'lastName'}}
+							<label for="lastName">Last name</label><input type="text" id="lastName" name="lastName" value="" class="form-control">
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-offset-3 col-md-6">
 						<div class="form-group">
-							{{text_field 'email'}}
+							<label for="email">Email</label><input type="text" id="email" name="email" value="" class="form-control">
 						</div>
 					</div>
 				</div>
@@ -37,7 +38,7 @@
 			<div class="row">
 				<div class="col-md-offset-3 col-md-6">
 					<div class="form-group">
-						{{text_field 'role'}}
+						<label for="role">Role</label><input type="text" id="role" name="role" value="" class="form-control">
 					</div>
 				</div>
 			</div>
@@ -45,14 +46,17 @@
 			<div class="row">
 				<div class="col-md-offset-3 col-md-6">
 					<div class="form-group">
-						{{text_field 'specialties'}}
+						<label for="specialties">Specialties</label><input type="text" id="specialties" name="specialties" value="" class="form-control">
 					</div>
 				</div>
 			</div>
 
 			<div class="row">
-				<div class=" col-md-offset-3 col-md-6 form-group">
-					{{text_area 'biography'}}
+				<div class=" col-md-offset-3 col-md-6">
+					<div class="form-group">
+					<label for="biography">Biography</label>
+					<textarea id="biography" name="biography" class="form-control"></textarea>
+				</div>
 				</div>
 			</div>
 
@@ -69,7 +73,7 @@
 			<div class="row">
 				<div class="col-md-offset-3 col-md-6">
 					<div class="form-group">
-						{{text_field 'twitter'}}
+						<label for="twitter">Twitter</label><input type="text" id="twitter" name="twitter" value="" class="form-control">
 					</div>
 				</div>
 			</div>
@@ -77,7 +81,7 @@
 			<div class="row">
 				<div class="col-md-offset-3 col-md-6">
 					<div class="form-group">
-						{{text_field 'portfolio'}}
+						<label for="portfolio">Portfolio</label><input type="text" id="portfolio" name="portfolio" value="" class="form-control">
 					</div>
 				</div>
 			</div>
@@ -85,7 +89,7 @@
 			<div class="row">
 				<div class="col-md-offset-3 col-md-6">
 					<div class="form-group">
-						{{text_field 'linkedin'}}
+						<label for="linkedin">Linkedin</label><input type="text" id="linkedin" name="linkedin" value="" class="form-control">
 					</div>
 				</div>
 			</div>

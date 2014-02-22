@@ -8,12 +8,10 @@
       "fast-render": {},
       "wow": {},
       "blog": {},
-      "profile": {},
       "voltage": {},
       "font-awesome": {},
       "simple-form": {},
       "smartfile": {}
-
     },
     "packages": {
       "bootstrap-3": {
@@ -45,11 +43,6 @@
         "git": "https://github.com/BeDifferential/meteor-blog.git",
         "tag": "v0.2.9",
         "commit": "6a0810f4c3cb9e4d2668c0cbf848d440b1234c89"
-      },
-      "profile": {
-        "git": "https://github.com/BeDifferential/meteor-profile.git",
-        "tag": "v0.0.8",
-        "commit": "a79eed39b871d4c384b76d77b78e318eb2f300fd"
       },
       "voltage": {
         "git": "https://github.com/BeDifferential/meteor-voltage.git",
