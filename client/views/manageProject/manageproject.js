@@ -2,7 +2,16 @@ var sf = new SmartFile({});
 
 Template.manageproject.rendered = function () {
 	fadeIn($('#createproject-content'));
-	//var proj = Projects.findOne({_id : Session.get("currentProject")});
+	$(':checkbox').checkbox();
+	var proj = Projects.findOne({_id : Session.get("currentProject")});
+
+	if (proj.type.indexOf("Web") !== -1){
+		$("#checkbox1").checkbox('check') 
+	}
+
+	if(proj.type.indexOf("Game") !== -1){
+		$("#checkbox2").checkbox('check') 
+	}
 };
 
 Template.manageproject.created = function () {
@@ -16,14 +25,20 @@ Template.manageproject.events({
 		e.preventDefault();
 
 		var file = template.find('#address').files[0];
-		console.log(file);
-		sf.upload(file, {
-			file: file.name,
-			path : 'images/'
-		},function(err, res){
-			if(err)
-				console.log(err);
-		});
+		var fileName = this.image;
+		if(file !== undefined){
+			console.log(file);
+			sf.upload(file, {
+				file: file.name,
+				path : 'images/'
+			},function(err, res){
+				if(err)
+					console.log(err);
+			});
+
+			fileName = file.name;
+		}
+
 
 		var typeReturn;
 		if($("#web-check").is(':checked') && $("#game-check").is(':checked') ){
@@ -51,9 +66,10 @@ Template.manageproject.events({
 		}
 
 		var project = {
+			_id : this._id,
 			title: $("#projectName").val(),
 			teamMembers: teamArray,
-			image: file.name,
+			image: fileName,
 			type: typeReturn,
 			description: $("#description").val(),
 			github: $("#github").val(),
@@ -62,10 +78,30 @@ Template.manageproject.events({
 
 		};
 
-		var projectID = Meteor.call("updateProject", project, function(){});
+		var projectID = Meteor.call("updateProject", project, function(error){
+			if(error){
+				console.log(error.reason);
+			}
+		});
 	},
 
 	'click #delBtn': function () {
-		
+		Projects.remove(this._id);
+		Router.go("/");
+	}
+});
+
+Template.manageproject.helpers({
+	getMembers: function () {
+		var members = this.teamMembers;
+		console.log(members);
+		var returnString = "";
+		for(var i = 0; i < members.length; i++){
+			if(i !== 0){
+				returnString += ", "
+			}
+			returnString += members[i].name;
+		}
+		return returnString;
 	}
 });
