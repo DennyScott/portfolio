@@ -5,6 +5,14 @@ Template.navbar.helpers({
 
 	email: function() {
 		return Meteor.user().emails[0].address;
+	},
+
+	checkProfile: function () {
+		var prof = Profiles.findOne({"userId" : Meteor.user()._id});
+
+		if(!prof){
+			Meteor.call('profile', {}, function (error, result) {});
+		}
 	}
 });
 
