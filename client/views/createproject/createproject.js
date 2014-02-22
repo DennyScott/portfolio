@@ -1,9 +1,23 @@
+var sf = new SmartFile({});
+
 Template.createproject.rendered = function () {
 	fadeIn($('#createproject-content'));
 };
 
 Template.createproject.events({
-	'submit': function () {
+	'submit': function (e, template) {
+		e.preventDefault();
+
+		var file = template.find('#address').files[0];
+		console.log(file);
+		sf.upload(file, {
+			file: file.name,
+			path : 'images/'
+		},function(err, res){
+			if(err)
+				console.log(err);
+		});
+
 		var typeReturn;
 		if($("#web-check").is(':checked') && $("#game-check").is(':checked') ){
 			typeReturn = "Web Game";
@@ -12,11 +26,11 @@ Template.createproject.events({
 		} else if ($("#game-check").is(':checked')){
 			typeReturn = "Game";
 		} else {
-			typeReturn = "Web"
+			typeReturn = "Web";
 		}
 
 		var teamMembers = $("#teamMembers").val().trim().split(",");
-		var teamArray = new Array();
+		var teamArray = [];
 
 		for(var i = 0; i < teamMembers.length; i++){
 
@@ -25,42 +39,22 @@ Template.createproject.events({
 			teamArray[i] = {
 				userId: foundUser !== undefined?foundUser._id:"Not Found",
 				name: names[0] + " " + names[1]
-			}
+			};
 
 		}
+
 		var project = {
 			title: $("#projectName").val(),
 			teamMembers: teamArray,
-			image: $("#address").val(),
+			image: file.name,
 			type: typeReturn,
 			description: $("#description").val(),
 			github: $("#github").val(),
 			url: $("#url").val(),
 			download: $('#download').val()
 
-		}
+		};
 
-		Meteor.call("project", project, function(){});
-
-		var callback = getURL();
-		var context = this;
-
-				var files = $('#address').files;
-				_.each(files,function(file){
-					var reader = new FileReader;
-					var fileData = {
-						name:file.name,
-						size:file.size,
-						type:file.type
-					};
-
-					reader.onload = function () {
-						fileData.data = new Uint8Array(reader.result);
-						Meteor.call("S3upload",fileData,context,callback);
-					};
-
-					reader.readAsArrayBuffer(file);
-
-				});
+		var projectID = Meteor.call("project", project, function(){});
 	}
 });
