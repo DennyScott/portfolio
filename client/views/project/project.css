@@ -1,10 +1,6 @@
 .project{
 	height:400px;
 	border-radius:25px;
-	color: #ccc;
-	font-size: 36px;
-	font-weight: bold;
-	font-family: "PT Sans Narrow","Trebuchet MS",Helvetica,sans-serif;
 	margin:auto 0;
 	margin-top:20px;
 	margin-bottom:10px;
@@ -22,8 +18,8 @@
 }
 
 .visit-project{
-	position: absolute; 
-	font-size: .5em;
+	margin-top:50px;
+	font-size: 1em;
 }
 
 .left-section p{
@@ -38,4 +34,8 @@
 #slogan {
 	margin-top: 20px;
 	margin-bottom: 20px;
+}
+
+.project-description{
+	font-weight:200;
 }
