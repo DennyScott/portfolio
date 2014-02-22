@@ -33,7 +33,10 @@ Template.createproject.events({
 			teamMembers: teamArray,
 			image: $("#address").val(),
 			type: typeReturn,
-			description: $("#description").val()
+			description: $("#description").val(),
+			github: $("#github").val(),
+			url: $("#url").val(),
+			download: $('#download').val()
 
 		}
 		Meteor.call("project", project, function(){});
