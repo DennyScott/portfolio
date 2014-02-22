@@ -66,17 +66,10 @@
         "tag": "v0.0.20",
         "commit": "fdba8e6604bfd71668304561a4fe6db3295bd1e9"
       },
-<<<<<<< HEAD
       "smartfile": {
         "git": "https://github.com/sylvaingi/meteor-smartfile.git",
         "tag": "v0.1.2",
         "commit": "4eb9fb8b72bdbf26a27c5016cb22a63dc1ef90b3"
-=======
-      "s3": {
-        "git": "https://github.com/Lepozepo/S3.git",
-        "tag": "v1.2.5",
-        "commit": "602fd599206d9082f09bc4b5c69af9f7d4bc0707"
->>>>>>> d26d447ad380c19419f812fbe3014cabf7a118fc
       },
       "just-i18n": {
         "git": "https://github.com/subhog/meteor-just-i18n.git",
