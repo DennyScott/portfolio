@@ -6,7 +6,9 @@ Meteor.methods({
 		var user = Meteor.user();
 
 		//filling in other keys
-		var prof = _.extend(_.pick(profileAttributes), {
+		var prof = {
+			lastName: profileAttributes.lastName,
+			firstName: profileAttributes.firstName,
 			twitter: "",
 			title: "",
 			bio: "",
@@ -14,8 +16,9 @@ Meteor.methods({
 			linkedIn: "",
 			joined: new Date().getTime(),
 			image: "",
-			userId: user._id
-		});
+			userId: user._id,
+			'team' : false
+		};
 
 		//Inserts new project into collection
 		var userID = Profiles.insert(prof);
@@ -23,6 +26,29 @@ Meteor.methods({
 		//returns the ID of the new project
 		return userID;
 	},
+
+	teamProfile : function () {
+
+		var prof = {
+			lastName: "Team",
+			firstName: "The",
+			twitter: "",
+			title: "",
+			bio: "",
+			github: "",
+			linkedIn: "",
+			joined: new Date().getTime(),
+			image: "",
+			'team' : true
+		};
+
+		//Inserts new project into collection
+		var userID = Profiles.insert(prof);
+
+		//returns the ID of the new project
+		return userID;
+	},
+
 	updateProfile: function(profileAttributes){
 		var user = Meteor.user();
 		Profiles.update(profileAttributes._id, profileAttributes);

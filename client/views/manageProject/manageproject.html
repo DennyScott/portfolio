@@ -1,0 +1,79 @@
+<template name="manageproject">
+	<div id="createproject-content">
+		<div class="container">
+			<h1 class="center createHeader">Manage Project</h1>
+			<form id="create-project">
+				<div class="row">
+					<div class="col-md-offset-3 col-md-6">
+						<div class="form-group">
+							<label for="projectName">Project name</label><input type="text" id="projectName" name="projectName" value="{{title}}" class="form-control">
+						</div>
+					</div>
+				</div>
+					<div class="row">
+					<div class="col-md-offset-3 col-md-6">
+						<div class="form-group">
+							<label for="teamMembers">Team members</label><input type="text" id="teamMembers" name="teamMembers" value="{{getMembers}}" class="form-control">
+						</div>
+					</div>
+				</div>
+
+					<div class="row">
+					<div class="col-md-offset-3 col-md-6">
+						<div class="form-group">
+							<label for="github">Github</label><input type="text" id="github" name="github" value="{{github}}" class="form-control">
+						</div>
+					</div>
+				</div>
+
+					<div class="row">
+					<div class="col-md-offset-3 col-md-6">
+						<div class="form-group">
+							<label for="url">Url</label><input type="text" id="url" name="url" value="{{url}}" class="form-control">
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-offset-3 col-md-6">
+						<div class="form-group">
+							<label for="address">Image</label>
+
+								<input type="file" id="address" name="address" value="" class="">
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-offset-3 col-md-6">
+						<div class="form-group">
+							<label for="address">Upload Project</label>
+
+								<input type="file" id="unity" name="unity" value="" class="">
+						</div>
+					</div>
+				</div>
+
+					<div class="row">
+					<div class="col-md-offset-3 col-md-6">
+						<div class="form-group">
+							<label class="checkbox" for="checkbox1">
+							<input type="checkbox" name="type" id = "checkbox1" data-toggle="checkbox">Web</label>
+							<label class="checkbox" for="checkbox2">
+							<input type="checkbox" name="type" id = "checkbox2" data-toggle="checkbox">Game</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+				<div class=" col-md-offset-3 col-md-6 form-group">
+					<label for="description">Description</label><textarea id="description" name="description" class="form-control">{{description}}</textarea>
+				</div>
+			</div>
+			<div class="row center">
+				<input type="submit" value = "Update Project" class="btn btn-primary">
+				<input type="button" value = "Delete Project" class="btn btn-danger" id="delBtn">
+			</div>
+			</form>
+		</div>
+	</div>
+</template>
