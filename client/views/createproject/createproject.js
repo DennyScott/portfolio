@@ -9,22 +9,18 @@ Template.createproject.events({
 	'submit': function (e, template) {
 		e.preventDefault();
 
-		var file = template.find('#address').files[0];
-		console.log(file);
-		sf.upload(file, {
-			file: file.name,
-			path : 'images/'
-		},function(err, res){
-			if(err)
-				console.log(err);
-		});
+		var imageName = uploadData('#address','images/', template);
+		var unityName = "none";
+		if(typeof template.find('#unity').files[0] !== 'undefined'){
+			unityName = uploadData('#unity','projects/', template);
+		}
 
 		var typeReturn;
-		if($("#web-check").is(':checked') && $("#game-check").is(':checked') ){
+		if($("#checkbox1").is(':checked') && $("#checkbox2").is(':checked') ){
 			typeReturn = "Web Game";
-		} else if ($("#web-check").is(':checked')){
+		} else if ($("#checkbox1").is(':checked')){
 			typeReturn = "Web";
-		} else if ($("#game-check").is(':checked')){
+		} else if ($("#checkbox2").is(':checked')){
 			typeReturn = "Game";
 		} else {
 			typeReturn = "Web";
@@ -47,15 +43,28 @@ Template.createproject.events({
 		var project = {
 			title: $("#projectName").val(),
 			teamMembers: teamArray,
-			image: file.name,
+			image: imageName,
 			type: typeReturn,
 			description: $("#description").val(),
 			github: $("#github").val(),
 			url: $("#url").val(),
-			download: $('#download').val()
+			download: unityName
 
 		};
 
 		var projectID = Meteor.call("project", project, function(){});
 	}
 });
+
+function uploadData(selector, path, template){
+	var file = template.find(selector).files[0];
+	sf.upload(file, {
+		file: file.name,
+		path : path
+	},function(err, res){
+		if(err)
+			console.log(err);
+	});
+
+	return file.name;
+}
