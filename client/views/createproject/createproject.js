@@ -2,6 +2,7 @@ var sf = new SmartFile({});
 
 Template.createproject.rendered = function () {
 	fadeIn($('#createproject-content'));
+	$(':checkbox').checkbox();
 };
 
 Template.createproject.events({
