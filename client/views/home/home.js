@@ -31,3 +31,12 @@ Template.home.events({
 		$('#games').removeClass("selected");
 	}
 });
+
+Template.home.helpers({
+	game: function() {
+		return Projects.find({type: 'Game'});
+	},
+	web: function() {
+		return Projects.find({type: 'Web'});
+	}
+})

@@ -19,12 +19,9 @@
 				Some sort of Web Slogan.
 			</div>
 			<div id="work-content">
-				{{> project}}
-				{{> project}}
-				{{> project}}
-				{{> project}}
-				{{> project}}
-				{{> project}}
+				{{#each web}}
+					{{> project}}
+				{{/each}}
 			</div>
 		</div>
 		<div id="game-content">
@@ -32,12 +29,9 @@
 				It's always funner with a friend.
 			</div>
 			<div id="work-content">
-				{{> project}}
-				{{> project}}
-				{{> project}}
-				{{> project}}
-				{{> project}}
-				{{> project}}
+				{{#each game}}
+					{{> project}}
+				{{/each}}
 			</div>
 		</div>
 	</div>
