@@ -10,7 +10,6 @@
       "blog": {},
       "voltage": {},
       "font-awesome": {},
-      "simple-form": {},
       "smartfile": {}
     },
     "packages": {
@@ -53,11 +52,6 @@
         "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
         "tag": "v4.0.3",
         "commit": "61e9361384347547ae144f8228faa4deffda23db"
-      },
-      "simple-form": {
-        "git": "https://github.com/BeDifferential/simple-form.git",
-        "tag": "v0.0.20",
-        "commit": "fdba8e6604bfd71668304561a4fe6db3295bd1e9"
       },
       "smartfile": {
         "git": "https://github.com/sylvaingi/meteor-smartfile.git",

@@ -18,8 +18,10 @@
 }
 
 .visit-project{
-	margin-top:50px;
-	font-size: 1em;
+	position:absolute;
+	bottom:25px;
+	font-size: .8em;
+	min-width: 100%;
 }
 
 .left-section p{

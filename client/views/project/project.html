@@ -3,12 +3,29 @@
 		<div class="project">
 			<div class="left-section col-xs-6 wow slideInLeft">
 				<h3>{{title}}</h3>
-				<div class="project-description">
-				{{description}}
-			</div>
+				<p>
+					{{#each teamMembers}}
+						<a href="#" class="teamMember">{{name}}</a> |
+					{{/each}}
 
+				</p>
+				<div class="project-description">
+				{{getDescription}}
+			</div>
 				<div class="visit-project">
-					<a href="#">Visit Project  <span class="glyphicon glyphicon-arrow-right"></span></a>
+					<hr>
+					{{#if hasGithub}}
+						<div><a href="{{github}}"><i class="fa fa-github"></i>  Visit Github </a></div>
+					{{else}}
+						<div><i class="fa fa-github"></i>  Visit Github</div>
+					{{/if}}
+
+					{{#if hasDemo}}
+						<div><a href="{{getDemo}}"><i class="fa fa-dashboard"></i>  Demo </a></div>
+					{{else}}
+						<div><i class="fa fa-dashboard"></i>  Demo </div>
+					{{/if}}
+					<div><i class="fa fa-book"></i>  View Project Diary</div>
 				</div>
 			</div>
 

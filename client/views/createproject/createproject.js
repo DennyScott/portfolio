@@ -10,7 +10,7 @@ Template.createproject.events({
 		e.preventDefault();
 
 		var imageName = uploadData('#address','images/', template);
-		var unityName = "none";
+		var unityName = "";
 		if(typeof template.find('#unity').files[0] !== 'undefined'){
 			unityName = uploadData('#unity','projects/', template);
 		}
