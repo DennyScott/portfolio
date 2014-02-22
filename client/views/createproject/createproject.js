@@ -53,6 +53,7 @@ Template.createproject.events({
 		};
 
 		var projectID = Meteor.call("project", project, function(){});
+		Router.go("/");
 	}
 });
 
