@@ -4,30 +4,11 @@ Meteor.methods({
 
 	profile: function(profileAttributes){
 		var user = Meteor.user();
-
-		//filling in other keys
-		var prof = {
-			lastName: "",
-			firstName: "",
-			twitter: "",
-			role: "",
-			specialties: "",
-			bio: "",
-			github: "",
-			linkedIn: "",
-			cv: "",
-			resume: "",
-			joined: new Date().getTime(),
-			image: "",
-			userId: user._id,
-			'team' : false
-		};
-
-		//Inserts new project into collection
-		var userID = Profiles.insert(prof);
-
-		//returns the ID of the new project
-		return userID;
+		if(!Profiles.findOne({"userId" : user._id})){
+			profileAttributes.joined = new Date().getTime();
+		}
+		console.log(profileAttributes);
+		Profiles.update({"userId": user._id}, profileAttributes, {upsert: true});
 	},
 
 	teamProfile : function () {
@@ -56,10 +37,6 @@ Meteor.methods({
 		return userID;
 	},
 
-	updateProfile: function(profileAttributes){
-		var user = Meteor.user();
-		Profiles.update({"userId": profileAttributes.userId}, profileAttributes);
-	},
 	updateTeamProfile: function(profileAttributes){
 		Profiles.update({"lastName": "Team"}, profileAttributes);
 	},
