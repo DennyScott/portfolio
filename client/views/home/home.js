@@ -6,7 +6,6 @@ Template.home.rendered = function () {
 	new WOW().init();
 
 		$('#test').waypoint(function(direction){
-			alert('You hit this waypoint');
 			$('#test').waypoint('destroy');
 		}, {offset: '75%'});
 
@@ -40,4 +39,4 @@ Template.home.helpers({
 	web: function() {
 		return Projects.find({$or: [{type: 'Web'}, {type: 'Web Game'}]});
 	}
-})
+});

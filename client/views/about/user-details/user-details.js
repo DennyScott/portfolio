@@ -37,8 +37,3 @@ Template.userDetails.helpers({
 
 
 });
-
-Template.userDetails.rendered = function () {
-	$("[rel='tooltip']").tooltip();
-	console.log($("[rel='tooltip']"));
-};

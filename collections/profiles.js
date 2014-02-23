@@ -3,6 +3,7 @@ Profiles = new Meteor.Collection('profiles');
 Meteor.methods({
 
 	profile: function(profileAttributes){
+		console.log("created user");
 		var user = Meteor.user();
 
 		//filling in other keys

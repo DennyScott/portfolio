@@ -29,7 +29,6 @@ Template.about.helpers({
 				nextProf = post;
 				foundCurrent = false;
 			}
-			console.log(post.userId + "   " + currentProfile._id);
 			if (post._id === currentProfile._id){
 				foundCurrent = true;
 			}

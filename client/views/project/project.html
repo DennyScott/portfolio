@@ -6,7 +6,7 @@
 				<p>
 					{{#each teamMembers}}
 						{{#if userFound}}
-							<a href="{{personAddress}}" class="teamMember">{{this}}</a> |
+							<a href="{{pathFor 'about' hash=personAddress}}" class="teamMember">{{this}}</a> |
 						{{else}}
 							<span class="teamMember">{{this}}</a> |
 						{{/if}}
