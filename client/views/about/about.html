@@ -1,18 +1,20 @@
 <template name="about">
 	<div id="about-content">
 		{{#each userProfiles}}
-		<div class="section" id="section{{sectionNumber}}">
+
+		<div class="section" id="{{_id}}">
 			<div class="person col-xs-12">
 				<div id="{{firstName}}-video" class="background-video"></div>
 				{{#if hasPrev}}
-					<a href="#section{{previousNumber}}" class="moveAbout"><i class="fa fa-angle-left directionButton" id="about-left"></i></a>
+					<a href="#{{previousSection}}" class="moveAbout"><i class="fa fa-angle-left directionButton" id="about-left"></i></a>
 				{{/if}}
 				{{#if hasNext}}
-					<a href="#section{{nextNumber}}" class="moveAbout"><i class="fa fa-angle-right directionButton" id="about-right"></i></a>
+					<a href="#{{nextSection}}" class="moveAbout"><i class="fa fa-angle-right directionButton" id="about-right"></i></a>
 				{{/if}}
 				{{> userDetails}}
 			</div>
 		</div>
+		{{incSection}}
 		{{/each}}
 	</div>
 	<div class="clear"></div>

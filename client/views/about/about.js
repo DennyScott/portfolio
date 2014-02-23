@@ -1,7 +1,8 @@
-sectionNumber = 0;
+var nextSection = null;
+var currentProfile = null;
+var prevSection = null;
 
 Template.about.rendered = function () {
-	sectionNumber = 0;
 }
 
 Template.about.helpers({
@@ -10,27 +11,45 @@ Template.about.helpers({
 		return sectionNumber;
 	},
 
-	nextNumber: function () {
-		return sectionNumber + 1;
+	nextSection: function () {
+		return nextSection._id;
 	},
 
-	previousNumber: function () {
-		return sectionNumber - 1;
+	previousSection: function () {
+		return prevSection._id;
 	},
 
 	hasNext: function (){
-		var totalSize = Profiles.find({}).fetch().length;
-		if(sectionNumber < totalSize){
+		currentProfile = this;
+		var profs = Profiles.find({}, {sort: {isTeam: -1}});
+		var nextProf = null;
+		var foundCurrent = false;
+		profs.forEach(function (post) {
+			if(foundCurrent === true){
+				nextProf = post;
+				foundCurrent = false;
+			}
+			console.log(post.userId + "   " + currentProfile._id);
+			if (post._id === currentProfile._id){
+				foundCurrent = true;
+			}
+		});
+		if(nextProf !== null){
+			nextSection = nextProf;
 			return true;
 		}
 		return false;
 	},
 
 	hasPrev: function () {
-		if(sectionNumber > 1) {
+		if(prevSection !== null){
 			return true;
 		}
 		return false;
+	},
+
+	incSection: function() {
+		prevSection = currentProfile;
 	},
 
 	userProfiles: function () {

@@ -22,7 +22,12 @@ Template.project.helpers({
 
 	personAddress: function() {
 		var names = this.split(" ");
-		return Profiles.findOne({lastName: names[1], firstName: names[0]})._id;
+
+		var prof = Profiles.findOne({lastName: names[1], firstName: names[0]});
+		if(prof){
+			return prof._id;
+		}
+		return "";
 	},
 
 	hasURL: function(){
