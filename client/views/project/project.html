@@ -5,7 +5,11 @@
 				<h3>{{title}}</h3>
 				<p>
 					{{#each teamMembers}}
-						<a href="#" class="teamMember">{{name}}</a> |
+						{{#if userFound}}
+							<a href="{{personAddress}}" class="teamMember">{{this}}</a> |
+						{{else}}
+							<span class="teamMember">{{this}}</a> |
+						{{/if}}
 					{{/each}}
 
 				</p>
@@ -21,23 +25,35 @@
 					{{/if}}
 
 					{{#if hasURL}}
-						<div class="col-md-6"><a href="{{url}}"><i class="fa fa-dashboard"></i>  Visit Website </a></div>
+						<div class="col-md-6"><a href="{{url}}"><i class="fa fa-rocket"></i>  Visit Website </a></div>
 					{{else}}
-						<div class="col-md-6"><i class="fa fa-dashboard"></i>  Visit Website </div>
+						<div class="col-md-6"><i class="fa fa-rocket"></i>  Visit Website </div>
 					{{/if}}
 
 					{{#if hasWindows}}
-						<div class="col-md-6"><a href="{{windowDownload}}"><i class="fa fa-dashboard"></i>  Try for Windows </a></div>
+						<div class="col-md-6"><a href="{{windowDownload}}"><i class="fa fa-windows"></i>  Try for Windows </a></div>
 					{{else}}
-						<div class="col-md-6"><i class="fa fa-dashboard"></i>  Try for Windows </div>
+						<div class="col-md-6"><i class="fa fa-windows"></i>  Try for Windows </div>
 					{{/if}}
 
 					{{#if hasMac}}
-						<div class="col-md-6"><a href="{{macDownload}}"><i class="fa fa-dashboard"></i>  Try for Mac </a></div>
+						<div class="col-md-6"><a href="{{macDownload}}"><i class="fa fa-apple"></i>  Try for Mac </a></div>
 					{{else}}
-						<div class="col-md-6"><i class="fa fa-dashboard"></i>  Try for Mac </div>
+						<div class="col-md-6"><i class="fa fa-apple"></i>  Try for Mac </div>
 					{{/if}}
+					{{#if hasDiary}}
+						<div class = "col-md-6"><a id="projectPage"><i class="fa fa-book"></i>  View Project Diary</a></div>
+					{{else}}
+						<div class = "col-md-6"><i class="fa fa-book"></i>  View Project Diary</div>
+					{{/if}}
+					{{#if currentUser}}
+						<div class = "col-md-6"><a href="{{pathFor 'manageproject' _id=this._id}}"><i class="fa fa-cogs"></i>  Manage Project</a></div>
+					{{else}}
+						<div class = "col-md-6"><i class="fa fa-cogs"></i>  Manage Project</div>
+					{{/if}}
+
 					<div class="col-md-6"><a id="projectPage"><i class="fa fa-book"></i>  View Project Diary</a></div>
+
 
 
 				</div>

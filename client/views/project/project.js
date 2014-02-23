@@ -10,6 +10,20 @@ Template.project.helpers({
 			return true;
 		}
 	},
+
+	userFound: function() {
+		var names = this.split(" ");
+		var prof = Profiles.findOne({lastName: names[1], firstName: names[0]});
+		if(prof){
+			return true;
+		}
+		return false;
+	},
+
+	personAddress: function() {
+		return Profiles.findOne({lastName: "Scott", firstName: "Travis"})._id;
+	},
+
 	hasURL: function(){
 		if(this.url === ""){
 			return false;
