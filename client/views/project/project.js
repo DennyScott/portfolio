@@ -21,7 +21,12 @@ Template.project.helpers({
 	},
 
 	personAddress: function() {
-		return Profiles.findOne({lastName: "Scott", firstName: "Travis"})._id;
+		var names = this.split(" ");
+		var prof = Profiles.findOne({lastName: names[1], firstName: names[0]});
+		if(prof){
+			return prof._id;
+		}
+		return "";
 	},
 
 	hasURL: function(){
