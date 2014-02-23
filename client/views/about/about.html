@@ -1,29 +1,19 @@
 <template name="about">
 	<div id="about-content">
-		<div class="section" id="section1">
+		{{#each userProfiles}}
+		<div class="section" id="section{{sectionNumber}}">
 			<div class="person col-xs-12">
-				<div id="denny-video" class="background-video"></div>
-				<a href="#section2" class="moveAbout"><i class="fa fa-angle-right directionButton" id="about-right"></i></a>
+				<div id="{{firstName}}-video" class="background-video"></div>
+				{{#if hasPrev}}
+					<a href="#section{{previousNumber}}" class="moveAbout"><i class="fa fa-angle-left directionButton" id="about-left"></i></a>
+				{{/if}}
+				{{#if hasNext}}
+					<a href="#section{{nextNumber}}" class="moveAbout"><i class="fa fa-angle-right directionButton" id="about-right"></i></a>
+				{{/if}}
 				{{> user-details}}
 			</div>
 		</div>
-
-		<div class="section" id="section2">
-			<div class="person col-xs-12" >
-				<div id="travis-video" class="background-video"></div>
-				<a href="#section1" class="moveAbout"><i class="fa fa-angle-left directionButton" id="about-left"></i></a>
-				<a href="#section3" class="moveAbout"><i class="fa fa-angle-right directionButton" id="about-right"></i></a>
-				{{> user-details}}
-			</div>
-		</div>
-
-		<div class="section" id="section3">
-			<div class="person col-xs-12">
-				<div id="adam-video" class="background-video"></div>
-				<a href="#section2" class="moveAbout"><i class="fa fa-angle-left directionButton" id="about-left"></i></a>
-				{{> user-details}}
-			</div>
-		</div>
+		{{/each}}
 	</div>
 	<div class="clear"></div>
 

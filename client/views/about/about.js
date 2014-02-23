@@ -1,9 +1,49 @@
+sectionNumber = 0;
+
+Template.about.rendered = function () {
+	sectionNumber = 0;
+}
+
+Template.about.helpers({
+	sectionNumber: function () {
+		sectionNumber++;
+		return sectionNumber;
+	},
+
+	nextNumber: function () {
+		return sectionNumber + 1;
+	},
+
+	previousNumber: function () {
+		return sectionNumber - 1;
+	},
+
+	hasNext: function (){
+		var totalSize = Profiles.find({}).fetch().length;
+		if(sectionNumber < totalSize){
+			return true;
+		}
+		return false;
+	},
+
+	hasPrev: function () {
+		if(sectionNumber > 1) {
+			return true;
+		}
+		return false;
+	},
+
+	userProfiles: function () {
+		return Profiles.find({}, {sort: {isTeam: -1}});
+	}
+});
+
 Template.about.rendered = function () {
 	$('.section').width(($(window).width()));
 	// $('#footer').css('position','fixed').css('width', '100%').css('bottom', '0');
 	video();
 
-	$('#denny-video').videobackground({
+	$('#Denny-video').videobackground({
 		videoSource: [['/video/superpencil.mp4', 'video/mp4'],
 			['video/superpencil.webm', 'video/webm'],
 			['video/superpencil.ogv', 'video/ogg']],
@@ -15,7 +55,7 @@ Template.about.rendered = function () {
 			}
 	});
 
-	$('#travis-video').videobackground({
+	$('#Travis-video').videobackground({
 		videoSource: [['/video/superpencil.mp4', 'video/mp4'],
 			['video/superpencil.webm', 'video/webm'],
 			['video/superpencil.ogv', 'video/ogg']],
@@ -27,7 +67,7 @@ Template.about.rendered = function () {
 			}
 	});
 
-	$('#adam-video').videobackground({
+	$('#The-video').videobackground({
 		videoSource: [['/video/superpencil.mp4', 'video/mp4'],
 			['video/superpencil.webm', 'video/webm'],
 			['video/superpencil.ogv', 'video/ogg']],
@@ -39,7 +79,7 @@ Template.about.rendered = function () {
 			}
 	});
 
-	$('.person').height($('#denny-video').height()+100);
+	$('.person').height($('#The-video').height()+100);
 
 	fadeIn($('#about-content'));
 };
