@@ -7,8 +7,8 @@ Meteor.methods({
 
 		//filling in other keys
 		var prof = {
-			lastName: profileAttributes.lastName,
-			firstName: profileAttributes.firstName,
+			lastName: "",
+			firstName: "",
 			twitter: "",
 			title: "",
 			bio: "",
@@ -51,7 +51,10 @@ Meteor.methods({
 
 	updateProfile: function(profileAttributes){
 		var user = Meteor.user();
-		Profiles.update(profileAttributes._id, profileAttributes);
+		Profiles.update({"userId": profileAttributes.userId}, profileAttributes);
+	},
+	updateTeamProfile: function(profileAttributes){
+		Profiles.update({"lastName": "Team"}, profileAttributes);
 	},
 
 	deleteProfile: function(id){
