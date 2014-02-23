@@ -34,6 +34,7 @@ Template.about.helpers({
 	},
 
 	userProfiles: function () {
+		sectionNumber = 0;
 		return Profiles.find({}, {sort: {isTeam: -1}});
 	}
 });
