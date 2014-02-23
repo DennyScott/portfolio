@@ -54,6 +54,14 @@ Template.project.helpers({
 		}
 	},
 
+	getMacDownload: function() {
+		return getPublicURL() + "projects/" + this.macDownload + "?download=true";
+	},
+
+	getWindowDownload: function() {
+		return getPublicURL() + "projects/" + this.windowDownload + "?download=true";
+	},
+
 
 	getDescription: function() {
 		if(this.description.length > 300){
