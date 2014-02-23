@@ -9,10 +9,21 @@ Template.createproject.events({
 	'submit': function (e, template) {
 		e.preventDefault();
 
-		var imageName = uploadData('#address','images/', template);
-		var unityName = "";
-		if(typeof template.find('#unity').files[0] !== 'undefined'){
-			unityName = uploadData('#unity','projects/', template);
+		var imageName = "";
+		if(typeof template.find('#address').files[0] !== 'undefined'){
+			imageName = uploadData('#address','images/', template);
+		}
+
+		//Get Windows Unity Game
+		var windowUnityName = "";
+		if(typeof template.find('#windowUnity').files[0] !== 'undefined'){
+			windowUnityName = uploadData('#windowUnity','projects/', template);
+		}
+
+		//Get Mac Unity Game
+		var macUnityName = "";
+		if(typeof template.find('#macUnity').files[0] !== 'undefined'){
+			macUnityName = uploadData('#macUnity','projects/', template);
 		}
 
 		var typeReturn;
@@ -48,7 +59,8 @@ Template.createproject.events({
 			description: $("#description").val(),
 			github: $("#github").val(),
 			url: $("#url").val(),
-			download: unityName
+			windowDownload: windowUnityName,
+			macDownload: macUnityName
 
 		};
 

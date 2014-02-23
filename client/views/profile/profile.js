@@ -5,8 +5,11 @@ Template.profile.rendered = function () {
 Template.profile.events({
 	'submit': function (e, template) {
 		e.preventDefault();
-
-		var profilePictureName = uploadData('#profilePicture','users/', template);
+		
+		var resumeName = "";
+		if(typeof template.find('#resume').files[0] !== 'undefined'){
+			resumeName = uploadData('#resume','users/', template);
+		}
 
 		var resumeName = uploadData('#resume','users/', template);
 

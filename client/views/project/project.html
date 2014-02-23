@@ -15,17 +15,30 @@
 				<div class="visit-project">
 					<hr>
 					{{#if hasGithub}}
-						<div><a href="{{github}}"><i class="fa fa-github"></i>  Visit Github </a></div>
+						<div class="col-md-6"><a href="{{github}}"><i class="fa fa-github"></i>  Visit Github </a></div>
 					{{else}}
-						<div><i class="fa fa-github"></i>  Visit Github</div>
+						<div class="col-md-6"><i class="fa fa-github"></i>  Visit Github</div>
 					{{/if}}
 
-					{{#if hasDemo}}
-						<div><a href="{{getDemo}}"><i class="fa fa-dashboard"></i>  Demo </a></div>
+					{{#if hasURL}}
+						<div class="col-md-6"><a href="{{url}}"><i class="fa fa-dashboard"></i>  Visit Website </a></div>
 					{{else}}
-						<div><i class="fa fa-dashboard"></i>  Demo </div>
+						<div class="col-md-6"><i class="fa fa-dashboard"></i>  Visit Website </div>
 					{{/if}}
-					<div><i class="fa fa-book"></i>  View Project Diary</div>
+
+					{{#if hasURL}}
+						<div class="col-md-6"><a href="{{url}}"><i class="fa fa-dashboard"></i>  Try for Windows </a></div>
+					{{else}}
+						<div class="col-md-6"><i class="fa fa-dashboard"></i>  Try for Windows </div>
+					{{/if}}
+
+					{{#if hasURL}}
+						<div class="col-md-6"><a href="{{url}}"><i class="fa fa-dashboard"></i>  Try for Mac </a></div>
+					{{else}}
+						<div class="col-md-6"><i class="fa fa-dashboard"></i>  Try for Mac </div>
+					{{/if}}
+
+					<div class="col-md-6"><i class="fa fa-book"></i>  View Project Diary</div>
 
 				</div>
 			</div>

@@ -10,7 +10,7 @@ Template.project.helpers({
 			return true;
 		}
 	},
-	hasDemo: function(){
+	hasURL: function(){
 		if(this.download === "" && this.url === ""){
 			return false;
 		}else{

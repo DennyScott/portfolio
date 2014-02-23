@@ -10,7 +10,7 @@
 						</div>
 					</div>
 				</div>
-					<div class="row">
+				<div class="row">
 					<div class="col-md-offset-3 col-md-6">
 						<div class="form-group">
 							<label for="teamMembers">Team members</label><input type="text" id="teamMembers" name="teamMembers" value="" class="form-control">
@@ -18,7 +18,7 @@
 					</div>
 				</div>
 
-					<div class="row">
+				<div class="row">
 					<div class="col-md-offset-3 col-md-6">
 						<div class="form-group">
 							<label for="github">Github</label><input type="text" id="github" name="github" value="" class="form-control">
@@ -26,7 +26,7 @@
 					</div>
 				</div>
 
-					<div class="row">
+				<div class="row">
 					<div class="col-md-offset-3 col-md-6">
 						<div class="form-group">
 							<label for="url">Url</label><input type="text" id="url" name="url" value="" class="form-control">
@@ -36,43 +36,93 @@
 
 				<div class="row">
 					<div class="col-md-offset-3 col-md-6">
+
 						<div class="form-group">
 							<label for="address">Image</label>
-
-								<input type="file" id="address" name="address" value="" class="">
+							<div class="fileinput fileinput-new" data-provides="fileinput">
+								<div class="input-group">
+									<div class="form-control uneditable-input" data-trigger="fileinput">
+										<span class="fui-clip fileinput-exists"></span>
+										<span class="fileinput-filename"></span>
+									</div>
+									<span class="input-group-btn btn-file">					    	
+										<span class="btn btn-default fileinput-new" data-role="select-file">Select file</span>
+										<span class="btn btn-default fileinput-exists" data-role="change"><span class="fui-gear"></span>  Change</span>
+										<input type="file" id="address" name="address" value="" class="">
+										<a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput"><span class="fui-trash"></span>  Remove</a>					    	
+									</span>					    
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 
 				<div class="row">
 					<div class="col-md-offset-3 col-md-6">
-						<div class="form-group">
-							<label for="address">Upload Project</label>
 
-								<input type="file" id="unity" name="unity" value="" class="">
+						<div class="form-group">
+							<label for="address">Upload Windows Project</label>
+							<div class="fileinput fileinput-new" data-provides="fileinput">
+								<div class="input-group">
+									<div class="form-control uneditable-input" data-trigger="fileinput">
+										<span class="fui-clip fileinput-exists"></span>
+										<span class="fileinput-filename"></span>
+									</div>
+									<span class="input-group-btn btn-file">					    	
+										<span class="btn btn-default fileinput-new" data-role="select-file">Select file</span>
+										<span class="btn btn-default fileinput-exists" data-role="change"><span class="fui-gear"></span>  Change</span>
+										<input type="file" id="windowUnity" name="windowUnity" value="" class="">
+										<a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput"><span class="fui-trash"></span>  Remove</a>					    	
+									</span>					    
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 
-					<div class="row">
+				<div class="row">
+					<div class="col-md-offset-3 col-md-6">
+
+						<div class="form-group">
+							<label for="address">Upload Mac Project</label>
+							<div class="fileinput fileinput-new" data-provides="fileinput">
+								<div class="input-group">
+									<div class="form-control uneditable-input" data-trigger="fileinput">
+										<span class="fui-clip fileinput-exists"></span>
+										<span class="fileinput-filename"></span>
+									</div>
+									<span class="input-group-btn btn-file">					    	
+										<span class="btn btn-default fileinput-new" data-role="select-file">Select file</span>
+										<span class="btn btn-default fileinput-exists" data-role="change"><span class="fui-gear"></span>  Change</span>
+										<input type="file" id="macUnity" name="macUnity" value="" class="">
+										<a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput"><span class="fui-trash"></span>  Remove</a>					    	
+									</span>					    
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+
+				<div class="row">
 					<div class="col-md-offset-3 col-md-6">
 						<div class="form-group">
 							<label class="checkbox" for="checkbox1">
-							<input type="checkbox" name="type" id = "checkbox1" data-toggle="checkbox">Web</label>
-							<label class="checkbox" for="checkbox2">
-							<input type="checkbox" name="type" id = "checkbox2" data-toggle="checkbox">Game</label>
+								<input type="checkbox" name="type" id = "checkbox1" data-toggle="checkbox">Web</label>
+								<label class="checkbox" for="checkbox2">
+									<input type="checkbox" name="type" id = "checkbox2" data-toggle="checkbox">Game</label>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="row">
-				<div class=" col-md-offset-3 col-md-6 form-group">
-					<label for="description">Description</label><textarea id="description" name="description" class="form-control"></textarea>
+						<div class="row">
+							<div class=" col-md-offset-3 col-md-6 form-group">
+								<label for="description">Description</label><textarea id="description" name="description" class="form-control"></textarea>
+							</div>
+						</div>
+						<div class="row center">
+							<input type="submit" value = "Create Project" class="btn btn-primary">
+						</div>
+					</form>
 				</div>
 			</div>
-			<div class="row center">
-				<input type="submit" value = "Create Project" class="btn btn-primary">
-			</div>
-			</form>
-		</div>
-	</div>
-</template>
+		</template>
