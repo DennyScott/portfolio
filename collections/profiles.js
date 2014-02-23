@@ -10,7 +10,8 @@ Meteor.methods({
 			lastName: "",
 			firstName: "",
 			twitter: "",
-			title: "",
+			role: "",
+			specialties: "",
 			bio: "",
 			github: "",
 			linkedIn: "",
@@ -32,13 +33,17 @@ Meteor.methods({
 		var prof = {
 			lastName: "Team",
 			firstName: "The",
-			twitter: "",
-			title: "",
-			bio: "",
-			github: "",
+			twitter: "MoonliteStudio1",
+			role: "Company",
+			specialties: "",
+			bio: "Moonlight studio was founded in 2013 as a collaboration to handle work from a prospective client."
+			 + " Moonlite Studio has allowed us to work collectivly under a single title as a team, both for clients"
+			 + " and on our own personal projects. With Moonlite, we have a common"
+			 +" area to which we can share our creations, and search for feedback. To contact us, please visit our contact us page!",
+			github: "https://github.com/Moonlite-Studio",
 			linkedIn: "",
 			joined: new Date().getTime(),
-			image: "",
+			image: "moon.jpg",
 			'team' : true
 		};
 
