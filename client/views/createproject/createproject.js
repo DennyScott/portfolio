@@ -1,5 +1,3 @@
-var sf = new SmartFile({});
-
 Template.createproject.rendered = function () {
 	fadeIn($('#createproject-content'));
 	$(':checkbox').checkbox();
@@ -66,8 +64,11 @@ Template.createproject.events({
 
 		var projectID = Meteor.call("project", project, function(){});
 
-		Meteor.timeout(function(){},5);
-		Router.go("/");
+		Meteor.setTimeout(function(){
+
+			Router.go("/");
+		},5000);
+
 	}
 });
 

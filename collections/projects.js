@@ -32,7 +32,7 @@ Meteor.methods({
 		}
 
 		//filling in other keys
-		var proj = _.extend(_.pick(projectAttributes, 'title','teamMembers', 'type', "description", "image", "github", "url", "download"), {
+		var proj = _.extend(_.pick(projectAttributes, 'title','teamMembers', 'type', "description", "image", "github", "url", "windowDownload", "macDownload"), {
 			createdBy: user._id,
 			authorName: userName,
 			started: new Date().getTime(),

@@ -11,20 +11,29 @@ Template.project.helpers({
 		}
 	},
 	hasURL: function(){
-		if(this.download === "" && this.url === ""){
+		if(this.url === ""){
 			return false;
 		}else{
 			return true;
 		}
 	},
 
-	getDemo: function(){
-		if(this.download !== ""){
-			return this.download;
+	hasWindows: function(){
+		if(this.windowDownload === ""){
+			return false;
+		}else{
+			return true;
 		}
-
-		return this.url;
 	},
+
+	hasMac: function(){
+		if(this.macDownload === ""){
+			return false;
+		}else{
+			return true;
+		}
+	},
+
 
 	getDescription: function() {
 		if(this.description.length > 320){

@@ -3,6 +3,7 @@ getPublicURL = function() {
 };
 
 uploadData = function(selector, path, template){
+	var sf = new SmartFile({});
 	var file = template.find(selector).files[0];
 	sf.upload(file, {
 		file: file.name,

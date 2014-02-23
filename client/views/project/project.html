@@ -26,14 +26,14 @@
 						<div class="col-md-6"><i class="fa fa-dashboard"></i>  Visit Website </div>
 					{{/if}}
 
-					{{#if hasURL}}
-						<div class="col-md-6"><a href="{{url}}"><i class="fa fa-dashboard"></i>  Try for Windows </a></div>
+					{{#if hasWindows}}
+						<div class="col-md-6"><a href="{{windowDownload}}"><i class="fa fa-dashboard"></i>  Try for Windows </a></div>
 					{{else}}
 						<div class="col-md-6"><i class="fa fa-dashboard"></i>  Try for Windows </div>
 					{{/if}}
 
-					{{#if hasURL}}
-						<div class="col-md-6"><a href="{{url}}"><i class="fa fa-dashboard"></i>  Try for Mac </a></div>
+					{{#if hasMac}}
+						<div class="col-md-6"><a href="{{macDownload}}"><i class="fa fa-dashboard"></i>  Try for Mac </a></div>
 					{{else}}
 						<div class="col-md-6"><i class="fa fa-dashboard"></i>  Try for Mac </div>
 					{{/if}}
