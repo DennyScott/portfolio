@@ -41,10 +41,10 @@ Template.about.helpers({
 	},
 
 	hasPrev: function () {
-		if(prevSection !== null){
-			return true;
+		if(this.firstName === "The" && this.lastName === "Team"){
+			return false;
 		}
-		return false;
+		return true;
 	},
 
 	incSection: function() {
