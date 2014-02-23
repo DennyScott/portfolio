@@ -4,7 +4,7 @@
  * http://jasny.github.com/bootstrap/javascript.html#fileinput
  * ===========================================================
  */
-
+fileInput = function(){
 +function ($) { "use strict";
 
   var isIE = window.navigator.appName == 'Microsoft Internet Explorer'
@@ -17,7 +17,7 @@
       
     this.$input = this.$element.find(':file')
     if (this.$input.length === 0) return
-
+      console.log("called file upload");
     this.name = this.$input.attr('name') || options.name
 
     this.$hidden = this.$element.find('input[type=hidden][name="'+this.name+'"]')
@@ -213,3 +213,4 @@
   });
 
 }(window.jQuery);
+}

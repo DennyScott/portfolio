@@ -1,6 +1,7 @@
 Template.createproject.rendered = function () {
 	fadeIn($('#createproject-content'));
 	$(':checkbox').checkbox();
+	fileInput();
 };
 
 Template.createproject.events({
