@@ -144,6 +144,12 @@
 			</div>
 			<div class="row center">
 				<input type="submit" value = "Update Profile" class="btn btn-primary">
+
+				<div class="loading">
+							{{#if loading}}
+							{{>spinner}}
+							{{/if}}
+						</div>
 			</div>
 		</form>
 	</div>

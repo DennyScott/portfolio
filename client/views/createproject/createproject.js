@@ -4,6 +4,12 @@ Template.createproject.rendered = function () {
 	fileInput();
 };
 
+Template.createproject.helpers({
+	loading: function () {
+		return Session.get("loading");
+	}
+});
+
 Template.createproject.events({
 	'submit': function (e, template) {
 		e.preventDefault();
@@ -59,10 +65,13 @@ Template.createproject.events({
 
 		var projectID = Meteor.call("project", project, function(){});
 
+		Session.set("loading", true);
+
 		Meteor.setTimeout(function(){
 
+			Session.set("loading", false);
 			Router.go("/");
-		},5000);
+		},3000);
 
 	}
 });

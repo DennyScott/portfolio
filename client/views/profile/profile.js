@@ -3,6 +3,12 @@ Template.profile.rendered = function () {
 	fileInput();
 };
 
+Template.profile.helpers({
+	loading: function () {
+		return Session.get("loading");
+	}
+});
+
 Template.profile.events({
 	'submit': function (e, template) {
 
@@ -45,8 +51,12 @@ Template.profile.events({
 
 		Meteor.call('updateProfile', prof, function (error, result) {});
 
+		Session.set("loading", true);
+
 		Meteor.setTimeout(function(){
+
+			Session.set("loading", false);
 			Router.go("/");
-		},5000);
+		},3000);
 	}
 });
