@@ -1,6 +1,7 @@
 Template.profile.rendered = function () {
 	fadeIn($('#profile'));
 	fileInput();
+
 };
 
 Template.profile.helpers({
@@ -11,9 +12,11 @@ Template.profile.helpers({
 
 Template.profile.events({
 	'submit': function (e, template) {
-
+		var currentProfile = this;
 		var user = Meteor.user();
 		e.preventDefault();
+		var joinedTime = '';
+
 
 		var profilePictureName = this.image;
 		if(typeof template.find('#profilepicture').files[0] !== 'undefined'){
@@ -32,6 +35,11 @@ Template.profile.events({
 			cv = uploadData('#cv','users/', template);
 		}
 
+		if(currentProfile){
+			joinedTime = currentProfile.joined;
+		} else {
+			joinedTime = "";
+		}
 		var prof = {
 			lastName: $("#lastName").val(),
 			firstName: $("#firstName").val(),
@@ -41,7 +49,7 @@ Template.profile.events({
 			bio: $("#biography").val(),
 			github: $("#github").val(),
 			linkedIn: $("#linkedin").val(),
-			joined: this.joined,
+			joined: joinedTime,
 			image: profilePictureName,
 			userId: user._id,
 			cv: cv,
@@ -49,7 +57,7 @@ Template.profile.events({
 			'team' : false
 		};
 
-		Meteor.call('updateProfile', prof, function (error, result) {});
+		Meteor.call('profile', prof, function (error, result) {});
 
 		Session.set("loading", true);
 
