@@ -1,4 +1,5 @@
-
+Meteor.subscribe('projects');
+Meteor.subscribe('profiles');
 
 Template.home.rendered = function () {
 	waypoints();
