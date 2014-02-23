@@ -40,14 +40,8 @@ Template.createproject.events({
 		var teamArray = [];
 
 		for(var i = 0; i < teamMembers.length; i++){
-
 			var names = teamMembers[i].trim().split(" ");
-			var foundUser = Meteor.users.findOne({"profile.lastName": names[1], "profile.firstName": names[0]});
-			teamArray[i] = {
-				userId: foundUser !== undefined?foundUser._id:"Not Found",
-				name: names[0] + " " + names[1]
-			};
-
+			teamArray[i] = names[0] + " " + names[1];
 		}
 
 		var project = {
