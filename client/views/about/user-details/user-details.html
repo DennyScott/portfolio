@@ -10,7 +10,6 @@
 		<div class="col-md-12 col-xs-12 user-info">
 			<div class="user-info"><h4>{{Name}}</h4></div>
 			<div class="user-info other-info">{{role}}</div>
-			<div class="user-info other-info"><a href="http://www.twitter.com/{{twitter}}">@{{twitter}}</a></div>
 
 		</div>
 	</div>
@@ -22,9 +21,9 @@
 	</div>
 	<div class="row links">
 			{{#if hasLinkedIn}}
-			<div class="other-info col-md-offset-3 col-md-2"><a href="{{linkedIn}}" class="user-link"><i class="fa fa-linkedin"></i><div class="shrink"><small>Linked In</small></div></a></div>
+			<div class="other-info col-md-offset-1 col-md-2"><a href="{{linkedIn}}" class="user-link"><i class="fa fa-linkedin"></i><div class="shrink"><small>Linked In</small></div></a></div>
 			{{else}}
-<div class="other-info col-md-offset-3 deadlink col-md-2"><i class="fa fa-linkedin"></i><div class="shrink"><small>Linked In</small></div></div>
+<div class="other-info col-md-offset-1 deadlink col-md-2"><i class="fa fa-linkedin"></i><div class="shrink"><small>Linked In</small></div></div>
 			{{/if}}
 
 			{{#if hasGithub}}
@@ -33,10 +32,18 @@
 			<div class="other-info deadlink col-md-2"><i class="fa fa-github"></i><div class="shrink"><small>Github</small></div></div>
 			{{/if}}
 
+			<div class="other-info  col-md-2"><a href="{{twitter}}" class="user-link"><i class="fa fa-twitter"></i><div class="shrink"><small>Twitter</small></div></a></div>
+
 			{{#if hasResume}}
 			<div class="other-info  col-md-2"><a href="{{resume}}" class="user-link"><i class="fa fa-indent"></i><div class="shrink"><small>Resume</small></div></a></div>
 			{{else}}
 			<div class="other-info deadlink col-md-2"><i class="fa fa-indent"></i><div class="shrink"><small>Resume</small></div></div>
+			{{/if}}
+
+			{{#if hasCV}}
+			<div class="other-info  col-md-2"><a href="{{cv}}" class="user-link"><i class="fa fa-paste"></i><div class="shrink"><small>CV</small></div></a></div>
+			{{else}}
+			<div class="other-info deadlink col-md-2"><i class="fa fa-paste"></i><div class="shrink"><small>CV</small></div></div>
 			{{/if}}
 	</div>
 	<div class="col-md-6 background-video" >

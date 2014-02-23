@@ -17,6 +17,14 @@ Template.userDetails.helpers({
 		}
 
 		return true;
+	},
+
+	hasCV: function(){
+		if(typeof this.cv === 'undefined' || this.cv===""){
+			return false;
+		}
+
+		return true;
 	}
 
 
