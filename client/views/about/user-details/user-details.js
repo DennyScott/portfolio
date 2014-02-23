@@ -25,6 +25,14 @@ Template.userDetails.helpers({
 		}
 
 		return true;
+	},
+
+	getResume: function(){
+		return getPublicURL() + "users/" + this.resume + "?download=true";
+	},
+
+	getCV: function(){
+		return getPublicURL() + "users/" + this.cv + "?download=true";
 	}
 
 

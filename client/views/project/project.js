@@ -21,7 +21,8 @@ Template.project.helpers({
 	},
 
 	personAddress: function() {
-		return Profiles.findOne({lastName: "Scott", firstName: "Travis"})._id;
+		var names = this.split(" ");
+		return Profiles.findOne({lastName: names[1], firstName: names[0]})._id;
 	},
 
 	hasURL: function(){
@@ -50,8 +51,8 @@ Template.project.helpers({
 
 
 	getDescription: function() {
-		if(this.description.length > 320){
-			return this.description.substring(0,320) + "...";
+		if(this.description.length > 300){
+			return this.description.substring(0,300) + "...";
 		}else{
 			return this.description;
 		}

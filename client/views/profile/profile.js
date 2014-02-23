@@ -20,6 +20,12 @@ Template.profile.events({
 			resumeName = uploadData('#resume','users/', template);
 		}
 
+		var cv = this.cv;
+
+		if(typeof template.find('#cv').files[0] !== 'undefined'){
+			cv = uploadData('#cv','users/', template);
+		}
+
 		var prof = {
 			lastName: $("#lastName").val(),
 			firstName: $("#firstName").val(),
@@ -32,6 +38,7 @@ Template.profile.events({
 			joined: this.joined,
 			image: profilePictureName,
 			userId: user._id,
+			cv: cv,
 			resume: resumeName,
 			'team' : false
 		};

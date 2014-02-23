@@ -1,9 +1,9 @@
 <template name="userDetails">
 	<div class="row">
 		<div class="col-xs-12 col-md-12 picture-row">
-			<a href="#" class="thumbnail profile-picture">
+			<span class="thumbnail profile-picture">
 				<img src="{{getImage}}" />
-			</a>
+			</span>
 		</div>
 	</div>
 	<div class="row">
@@ -35,13 +35,13 @@
 			<div class="other-info  col-md-2"><a href="{{twitter}}" class="user-link"><i class="fa fa-twitter"></i><div class="shrink"><small>Twitter</small></div></a></div>
 
 			{{#if hasResume}}
-			<div class="other-info  col-md-2"><a href="{{resume}}" class="user-link"><i class="fa fa-indent"></i><div class="shrink"><small>Resume</small></div></a></div>
+			<div class="other-info  col-md-2"><a href="{{getResume}}" class="user-link"><i class="fa fa-indent"></i><div class="shrink"><small>Resume</small></div></a></div>
 			{{else}}
 			<div class="other-info deadlink col-md-2"><i class="fa fa-indent"></i><div class="shrink"><small>Resume</small></div></div>
 			{{/if}}
 
 			{{#if hasCV}}
-			<div class="other-info  col-md-2"><a href="{{cv}}" class="user-link"><i class="fa fa-paste"></i><div class="shrink"><small>CV</small></div></a></div>
+			<div class="other-info  col-md-2"><a href="{{getCV}}" class="user-link"><i class="fa fa-paste"></i><div class="shrink"><small>CV</small></div></a></div>
 			{{else}}
 			<div class="other-info deadlink col-md-2"><i class="fa fa-paste"></i><div class="shrink"><small>CV</small></div></div>
 			{{/if}}

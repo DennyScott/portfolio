@@ -73,6 +73,12 @@ video{
 .profile-picture{
 	margin:0 auto;
 	max-width:300px;
+	max-height:250px;
+	overflow-y:hidden;
+}
+
+.profile-picture img{
+	overflow-y:hidden;
 }
 
 .picture-row {
