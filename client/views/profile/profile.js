@@ -1,5 +1,6 @@
 Template.profile.rendered = function () {
 	fadeIn($('#profile'));
+	fileInput();
 };
 
 Template.profile.events({
