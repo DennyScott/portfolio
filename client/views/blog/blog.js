@@ -1,5 +1,5 @@
 Template.blogIndex.rendered = function () {
-//	fadeIn($('#meteor-blog'));
+	fadeIn($('#meteor-blog'));
 };
 
 Template.blogIndex.destroyed = function () {
@@ -7,7 +7,7 @@ Template.blogIndex.destroyed = function () {
 };
 
 Template.blogShow.rendered = function () {
-//	fadeIn($('#meteor-blog'));
+	fadeIn($('#meteor-blog'));
 };
 
 Template.blogAdmin.rendered = function () {
