@@ -66,7 +66,7 @@ Template.about.rendered = function () {
 		videoSource: [['/video/superpencil.mp4', 'video/mp4'],
 			['video/superpencil.webm', 'video/webm'],
 			['video/superpencil.ogv', 'video/ogg']],
-			poster: '/video/big-buck-bunny.jpg',
+			poster: '/images/birds.jpg',
 			controlPosition: 'none',
 			loop: 'true',
 			loadedCallback: function() {
