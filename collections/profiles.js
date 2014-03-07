@@ -20,7 +20,7 @@ Meteor.methods({
 			twitter: "MoonliteStudio1",
 			role: "Company",
 			specialties: "",
-			bio: "Moonlight studio was founded in 2013 as a collaboration to handle work from a prospective client."
+			bio: "Moonlite studio was founded in 2013 as a collaboration to handle work from a prospective client."
 			 + " Moonlite Studio has allowed us to work collectivly under a single title as a team, both for clients"
 			 + " and on our own personal projects. With Moonlite, we have a common"
 			 +" area to which we can share our creations, and search for feedback. To contact us, please visit our contact us page!",
