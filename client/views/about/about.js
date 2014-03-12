@@ -74,6 +74,18 @@ Template.about.rendered = function () {
 			}
 	});
 
+	$('#Domenica-video').videobackground({
+		videoSource: [['/video/superpencil.mp4', 'video/mp4'],
+			['video/superpencil.webm', 'video/webm'],
+			['video/superpencil.ogv', 'video/ogg']],
+			poster: '/images/birds.jpg',
+			controlPosition: 'none',
+			loop: 'true',
+			loadedCallback: function() {
+				$(this).videobackground('mute');
+			}
+	});
+
 	$('#Travis-video').videobackground({
 		videoSource: [['/video/superpencil.mp4', 'video/mp4'],
 			['video/superpencil.webm', 'video/webm'],
