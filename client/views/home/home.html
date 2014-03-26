@@ -13,6 +13,9 @@
 			<a class="who" id="games">
 				Games
 			</a>
+			<a class="who" id="media">
+				Media
+			</a>
 		</nav>
 		<div id="web-content">
 			<div id="work-content">
@@ -24,6 +27,14 @@
 		<div id="game-content">
 			<div id="work-content">
 				{{#each game}}
+					{{> project}}
+				{{/each}}
+			</div>
+		</div>
+
+		<div id="digital-content">
+			<div id="work-content">
+				{{#each media}}
 					{{> project}}
 				{{/each}}
 			</div>

@@ -34,10 +34,16 @@ Template.createproject.events({
 		var typeReturn;
 		if($("#checkbox1").is(':checked') && $("#checkbox2").is(':checked') ){
 			typeReturn = "Web Game";
-		} else if ($("#checkbox1").is(':checked')){
+		}else if($("#checkbox1").is(':checked') && $("#checkbox3").is(':checked') ){
+			typeReturn = "Web Media";
+		} else if($("#checkbox1").is(':checked') && $("#checkbox2").is(':checked') && $("#checkbox3").is(':checked') ){
+			typeReturn = "Web Game Media";
+		}else if ($("#checkbox1").is(':checked')){
 			typeReturn = "Web";
 		} else if ($("#checkbox2").is(':checked')){
 			typeReturn = "Game";
+		} else if($("#checkbox3").is(':checked')){
+			typeReturn = "Media";
 		} else {
 			typeReturn = "Web";
 		}
