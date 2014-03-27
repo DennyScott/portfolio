@@ -36,6 +36,7 @@ Template.createproject.events({
 			typeReturn = "Web Game";
 		}else if($("#checkbox1").is(':checked') && $("#checkbox3").is(':checked') ){
 			typeReturn = "Web Media";
+			console.log("Thinks 1 is checked");
 		} else if($("#checkbox1").is(':checked') && $("#checkbox2").is(':checked') && $("#checkbox3").is(':checked') ){
 			typeReturn = "Web Game Media";
 		}else if ($("#checkbox1").is(':checked')){

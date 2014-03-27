@@ -101,6 +101,15 @@
 	transition: color 500ms ease;
 }
 
+#media-content{
+	display:none;
+	-webkit-transition: color 500ms ease;
+	-moz-transition: color 500ms ease;
+	-ms-transition: color 500ms ease;
+	-o-transition: color 500ms ease;
+	transition: color 500ms ease;
+}
+
 #web-content{
 	-webkit-transition: color 500ms ease;
 	-moz-transition: color 500ms ease;
