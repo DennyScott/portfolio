@@ -99,7 +99,10 @@ Template.manageproject.events({
 	},
 
 	'click #delBtn': function () {
-		Projects.remove(this._id);
+		Meteor.call("deleteProject", this._id, function(err,res){
+			if(err)
+				console.log();
+		});
 		Router.go("/");
 	}
 });
