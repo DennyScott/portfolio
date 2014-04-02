@@ -22,30 +22,30 @@
 				<div class="visit-project">
 					<hr>
 					{{#if hasGithub}}
-						<div class="col-md-6"><a href="{{github}}"><i class="fa fa-github"></i>  Visit Github </a></div>
+						<div class="col-md-6"><a href="{{github}}" target="_blank"><i class="fa fa-github"></i>  Visit Github </a></div>
 					{{else}}
 						<div class="col-md-6"><i class="fa fa-github"></i>  Visit Github</div>
 					{{/if}}
 
 					{{#if hasURL}}
-						<div class="col-md-6"><a href="{{url}}"><i class="fa fa-rocket"></i>  Visit Website </a></div>
+						<div class="col-md-6"><a href="{{url}}" target="_blank"><i class="fa fa-rocket"></i>  Visit Website </a></div>
 					{{else}}
 						<div class="col-md-6"><i class="fa fa-rocket"></i>  Visit Website </div>
 					{{/if}}
 
 					{{#if hasWindows}}
-						<div class="col-md-6"><a href="{{getWindowDownload}}"><i class="fa fa-windows"></i>  Try for Windows </a></div>
+						<div class="col-md-6"><a href="{{getWindowDownload}}" target="_blank"><i class="fa fa-windows"></i>  Try for Windows </a></div>
 					{{else}}
 						<div class="col-md-6"><i class="fa fa-windows"></i>  Try for Windows </div>
 					{{/if}}
 
 					{{#if hasMac}}
-						<div class="col-md-6"><a href="{{getMacDownload}}"><i class="fa fa-apple"></i>  Try for Mac </a></div>
+						<div class="col-md-6"><a href="{{getMacDownload}}" target="_blank"><i class="fa fa-apple"></i>  Try for Mac </a></div>
 					{{else}}
 						<div class="col-md-6"><i class="fa fa-apple"></i>  Try for Mac </div>
 					{{/if}}
 					{{#if hasDiary}}
-						<div class = "col-md-6"><a id="projectPage"><i class="fa fa-book"></i>  View Project Diary</a></div>
+						<div class = "col-md-6"><a id="projectPage" target="_blank"><i class="fa fa-book"></i>  View Project Diary</a></div>
 					{{else}}
 						<div class = "col-md-6"><i class="fa fa-book"></i>  View Project Diary</div>
 					{{/if}}
@@ -61,7 +61,7 @@
 			</div>
 
 			<div class="right-section col-xs-6 wow slideInRight">
-				<a href="{{url}}"><img class="project-image" data-lightbox="{{hasLightbox}}" src="{{getImage}}"></a>
+				<a href="{{whichLink}}" target="_blank"><img class="project-image" src="{{getImage}}"></a>
 			</div>
 		</div>
 	</div>

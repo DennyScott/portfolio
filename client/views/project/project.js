@@ -11,11 +11,19 @@ Template.project.helpers({
 		}
 	},
 
+	whichLink: function(){
+		if(this.lightbox === false || typeof this.lightbox === "undefined"){
+			return this.url;
+		}else{
+			return getPublicURL() + "images/" + this.image;
+		}
+	},
+
 	hasLightbox: function(){
-		if(this.lightbox === false){
+		if(this.lightbox === false || typeof this.lightbox === "undefined"){
 			return false;
 		}else{
-			return "mediaImage";
+			return "_blank";
 		}
 	},
 
