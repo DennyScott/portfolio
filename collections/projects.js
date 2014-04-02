@@ -11,6 +11,7 @@ Meteor.methods({
 	project: function(projectAttributes){
 		var user = Meteor.user();
 		var userName = user.profile.firstName + " " + user.profile.lastName;
+		var projectRank = Projects.find().count() + 1;
 
 		//Ensures that the user is logged in
 		if (!user){
@@ -41,6 +42,7 @@ Meteor.methods({
 				updateAuthorName: userName,
 				updateAuthorID: user._id
 			},
+			rank: projectRank,
 			completed: false,
 			completionDate : new Date().getTime()
 		});

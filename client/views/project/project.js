@@ -75,5 +75,18 @@ Template.project.helpers({
 Template.project.events({
   'click #projectPage' : function () {
     Router.go('manageproject', {"_id": this._id});
+  },
+
+  'click .upVote' : function () {
+		changeVote(this._id, 1);
+  },
+    'click .downVote' : function () {
+		changeVote(this._id, -1);
   }
 });
+
+function changeVote(projectId, num){
+	var project = Projects.findOne(projectId);
+	project.rank += num;
+	Meteor.call("updateProject", project);
+}
