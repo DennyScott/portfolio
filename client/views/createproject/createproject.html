@@ -118,23 +118,29 @@
 								<label class="checkbox" for="checkbox2">
 									<input type="checkbox" name="type" id = "checkbox2" data-toggle="checkbox">Game</label>
 									<label class="checkbox" for="checkbox3">
-									<input type="checkbox" name="type" id = "checkbox3" data-toggle="checkbox">Media</label>
+										<input type="checkbox" name="type" id = "checkbox3" data-toggle="checkbox">Media</label>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="row">
-							<div class=" col-md-offset-3 col-md-6 form-group">
-								<label for="description">Description</label><textarea id="description" name="description" class="form-control"></textarea>
+							<div class="row">
+								<div class="col-md-offset-3 col-md-6">
+								<label class="checkbox" for="lightbox">
+									<input type="checkbox" name="type" id ="lightbox" data-toggle="checkbox">Lightbox</label>
+								</div>
 							</div>
-						</div>
-						<div class="row center">
-							<input type="submit" value = "Create Project" class="btn btn-primary"><div class="loading">
-							{{#if loading}}
-							{{>spinner}}
-							{{/if}}
-						</div>
-						</div>
-					</form>
+								<div class="row">
+									<div class=" col-md-offset-3 col-md-6 form-group">
+										<label for="description">Description</label><textarea id="description" name="description" class="form-control"></textarea>
+									</div>
+								</div>
+								<div class="row center">
+									<input type="submit" value = "Create Project" class="btn btn-primary"><div class="loading">
+									{{#if loading}}
+									{{>spinner}}
+									{{/if}}
+								</div>
+							</div>
+						</form>
+					</div>
 				</div>
-			</div>
-		</template>
+			</template>

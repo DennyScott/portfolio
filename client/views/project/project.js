@@ -11,6 +11,14 @@ Template.project.helpers({
 		}
 	},
 
+	hasLightbox: function(){
+		if(this.lightbox === false){
+			return false;
+		}else{
+			return "mediaImage";
+		}
+	},
+
 	userFound: function() {
 		var names = this.split(" ");
 		var prof = Profiles.findOne({lastName: names[1], firstName: names[0]});

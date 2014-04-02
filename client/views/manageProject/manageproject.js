@@ -65,6 +65,10 @@ Template.manageproject.events({
 			typeReturn = "Web";
 		}
 
+		var lightbox = false;
+		if($("#lightbox").is(':checked'))
+			lightbox = true;
+
 		var teamMembers = $("#teamMembers").val().trim().split(",");
 		var teamArray = [];
 
@@ -83,9 +87,10 @@ Template.manageproject.events({
 			url: $("#url").val(),
 			_id: this._id,
 			windowDownload: windowUnityName,
-			macDownload: macUnityName
+			macDownload: macUnityName,
+			lightbox: lightbox
 
-		};	
+		};
 
 		var projectID = Meteor.call("updateProject", project, function(error){
 			if(error){

@@ -11,28 +11,29 @@
       "voltage": {},
       "font-awesome": {},
       "smartfile": {},
-      "spin": {}
+      "spin": {},
+      "lightbox2": {}
     },
     "packages": {
       "bootstrap-3": {
         "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
-        "tag": "v3.1.0-1",
-        "commit": "329dccb08bfc18c635676dea600ac9953162cda9"
+        "tag": "v3.1.1-1",
+        "commit": "63dd38968828bb8963636df93e9a1c45e2dfe67e"
       },
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
-        "tag": "v0.6.3",
-        "commit": "79861385df5d2b667630ec82abe4de3efa3166e3"
+        "tag": "v0.7.0",
+        "commit": "05f34bc48c4cad9fdaa366c1ddcabe6980232ece"
       },
       "accounts-entry": {
-        "git": "https://github.com/BeDifferential/accounts-entry.git",
-        "tag": "v0.6.0",
-        "commit": "54cd9585ea58c88f3dc2d736f3ae7a6fa8432c13"
+        "git": "https://github.com/Differential/accounts-entry.git",
+        "tag": "v0.7.1",
+        "commit": "7d6b92335f4c6e730c383324e5d340b3a241cad3"
       },
       "fast-render": {
         "git": "https://github.com/arunoda/meteor-fast-render.git",
-        "tag": "v0.1.15",
-        "commit": "baf79a3e5863acc3abfe2d0d62fb23b21fe880de"
+        "tag": "v0.1.23",
+        "commit": "933b9d8992f1c7004f9993b1b15dffe3bac672f3"
       },
       "wow": {
         "git": "https://github.com/noorderstorm/meteor-wow.git",
@@ -40,14 +41,14 @@
         "commit": "f5e0e3fbb123c1e19f236123f52d93eea4716001"
       },
       "blog": {
-        "git": "https://github.com/BeDifferential/meteor-blog.git",
-        "tag": "v0.2.9",
-        "commit": "6a0810f4c3cb9e4d2668c0cbf848d440b1234c89"
+        "git": "https://github.com/Differential/meteor-blog.git",
+        "tag": "v0.3.0",
+        "commit": "b4dd3724200c3ec034196156d2bb6a746f108609"
       },
       "voltage": {
-        "git": "https://github.com/BeDifferential/meteor-voltage.git",
-        "tag": "v0.0.4",
-        "commit": "fbf50c683c35e67824d864edab24441d848cae9d"
+        "git": "https://github.com/Differential/meteor-voltage.git",
+        "tag": "v0.1.0",
+        "commit": "c565e4ad844eb53db23dda537473cdd71b7ef883"
       },
       "font-awesome": {
         "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
@@ -64,20 +65,25 @@
         "tag": "v0.2.2",
         "commit": "3f655f0016228e4195acc784c45d3e3a247dc39f"
       },
+      "lightbox2": {
+        "git": "https://github.com/wulx/meteor-lightbox2.git",
+        "tag": "v0.0.1",
+        "commit": "2ddc8f33e47d0790a1ee28177feb9a1f3dabda00"
+      },
+      "blaze-layout": {
+        "git": "https://github.com/EventedMind/blaze-layout.git",
+        "tag": "v0.2.2",
+        "commit": "8bc53798fe5965669ae67c72f91829fcfdceabfd"
+      },
       "just-i18n": {
         "git": "https://github.com/subhog/meteor-just-i18n.git",
-        "tag": "v0.1.1",
-        "commit": "ce88ac66c0dc107dc2da93ce152616115838101f"
+        "tag": "v0.2.4",
+        "commit": "91decfcf5b3b5e67f202a67658350b862330bf3d"
       },
       "accounts-t9n": {
-        "git": "https://github.com/softwarerero/meteor-accounts-t9n.git",
-        "tag": "v0.0.2",
-        "commit": "408e3a037114cb72163073110e2121e3d548c1a2"
-      },
-      "parsleyjs": {
-        "git": "https://github.com/nate-strauser/meteor-parsleyjs.git",
-        "tag": "v1.1.7",
-        "commit": "035a1e56a78e50369686b7e281aa71e3daf3729a"
+        "git": "https://github.com/Differential/meteor-accounts-t9n.git",
+        "branch": "fix-just-i18n",
+        "commit": "0e3f96d189b8cac3813b1f5a20a59115881f628d"
       },
       "minimongoid": {
         "git": "https://github.com/Exygy/minimongoid.git",
@@ -91,13 +97,13 @@
       },
       "roles": {
         "git": "https://github.com/alanning/meteor-roles.git",
-        "tag": "v1.2.6",
-        "commit": "f2a9058281f8f2fe028767841d7445aadd6893cf"
+        "tag": "v1.2.8",
+        "commit": "68844ba216c348d332bdb840825850f497f515bb"
       },
       "marked": {
         "git": "https://github.com/chuangbo/meteor-marked.git",
-        "tag": "v0.2.9",
-        "commit": "6485d6f03841501f81176e34ab375840473aa714"
+        "tag": "v0.3.2",
+        "commit": "850f63135cdeb05344c420bd586fd8af9cab75df"
       },
       "ace-embed": {
         "git": "https://github.com/stuartfenton/meteor-ace-embed.git",

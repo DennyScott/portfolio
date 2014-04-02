@@ -49,6 +49,10 @@ Template.createproject.events({
 			typeReturn = "Web";
 		}
 
+		var lightbox = false;
+		if($("#lightbox").is(':checked'))
+			lightbox = true;
+
 		var teamMembers = $("#teamMembers").val().trim().split(",");
 		var teamArray = [];
 
@@ -66,7 +70,8 @@ Template.createproject.events({
 			github: $("#github").val(),
 			url: $("#url").val(),
 			windowDownload: windowUnityName,
-			macDownload: macUnityName
+			macDownload: macUnityName,
+			lightbox: lightbox
 
 		};
 

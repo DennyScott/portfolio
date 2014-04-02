@@ -11,7 +11,7 @@
 						{{#if userFound}}
 							<a href="{{pathFor 'about' hash=personAddress}}" class="teamMember">{{this}}</a> |
 						{{else}}
-							<span class="teamMember">{{this}}</a> |
+							<span class="teamMember">{{this}}</span> |
 						{{/if}}
 					{{/each}}
 
@@ -61,7 +61,7 @@
 			</div>
 
 			<div class="right-section col-xs-6 wow slideInRight">
-				<a href="{{url}}"><img class="project-image" src="{{getImage}}"></a>
+				<a href="{{url}}"><img class="project-image" data-lightbox="{{hasLightbox}}" src="{{getImage}}"></a>
 			</div>
 		</div>
 	</div>
