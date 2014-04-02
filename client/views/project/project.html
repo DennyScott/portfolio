@@ -2,6 +2,9 @@
 	<div class="project-wrapper container">
 		<div class="project">
 			<div class="left-section col-xs-6 wow slideInLeft">
+				{{#if currentUser}}
+				<i class="upVote fa fa-arrow-up"></i>
+				{{/if}}
 				<h3>{{title}}</h3>
 				<p>
 					{{#each teamMembers}}
@@ -51,7 +54,9 @@
 					{{else}}
 						<div class = "col-md-6"><i class="fa fa-cogs"></i>  Manage Project</div>
 					{{/if}}
-
+					{{#if currentUser}}
+					<i class="downVote fa fa-arrow-down"></i>
+					{{/if}}
 				</div>
 			</div>
 

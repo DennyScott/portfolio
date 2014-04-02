@@ -50,7 +50,7 @@ Template.home.helpers({
 		return Projects.find({$or: [{type: 'Game'}, {type: 'Web Game'}, {type: 'Web Game Media'}]});
 	},
 	web: function() {
-		return Projects.find({$or: [{type: 'Web'}, {type: 'Web Game'}, {type: 'Web Game Media'}]});
+		return Projects.find({$or: [{type: 'Web'}, {type: 'Web Game'}, {type: 'Web Game Media'}]}, {sort: {'rank': -1}});
 	},
 	media: function() {
 		return Projects.find({$or: [{type: 'Media'}, {type: 'Web Media'}]});
