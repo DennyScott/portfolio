@@ -1,6 +1,6 @@
 #wrap {
   min-height: 100%;
-  height: 100%;
+  height: 10000px;
   /* Negative indent footer by its height */
   margin: 0 auto -100px;
   /* Pad bottom by footer height */

@@ -7,12 +7,11 @@
       "accounts-entry": {},
       "fast-render": {},
       "wow": {},
-      "blog": {},
       "voltage": {},
       "font-awesome": {},
       "smartfile": {},
       "spin": {},
-      "lightbox2": {}
+      "famono": {}
     },
     "packages": {
       "bootstrap-3": {
@@ -22,28 +21,23 @@
       },
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
-        "tag": "v0.7.0",
-        "commit": "05f34bc48c4cad9fdaa366c1ddcabe6980232ece"
+        "tag": "v0.7.1",
+        "commit": "d1ffb3f06ea4c112132b030f2eb1a70b81675ecb"
       },
       "accounts-entry": {
         "git": "https://github.com/Differential/accounts-entry.git",
-        "tag": "v0.7.1",
-        "commit": "7d6b92335f4c6e730c383324e5d340b3a241cad3"
+        "tag": "v0.7.2",
+        "commit": "cda8617139b5edd79a52023986bfecb48e4b9dc4"
       },
       "fast-render": {
         "git": "https://github.com/arunoda/meteor-fast-render.git",
-        "tag": "v0.1.23",
-        "commit": "933b9d8992f1c7004f9993b1b15dffe3bac672f3"
+        "tag": "v0.2.2",
+        "commit": "2a7298d72a84b85e989ec2cc9300bbea7c159eb8"
       },
       "wow": {
         "git": "https://github.com/noorderstorm/meteor-wow.git",
         "tag": "v0.1.3",
         "commit": "f5e0e3fbb123c1e19f236123f52d93eea4716001"
-      },
-      "blog": {
-        "git": "https://github.com/Differential/meteor-blog.git",
-        "tag": "v0.3.0",
-        "commit": "b4dd3724200c3ec034196156d2bb6a746f108609"
       },
       "voltage": {
         "git": "https://github.com/Differential/meteor-voltage.git",
@@ -65,15 +59,15 @@
         "tag": "v0.2.2",
         "commit": "3f655f0016228e4195acc784c45d3e3a247dc39f"
       },
-      "lightbox2": {
-        "git": "https://github.com/wulx/meteor-lightbox2.git",
-        "tag": "v0.0.1",
-        "commit": "2ddc8f33e47d0790a1ee28177feb9a1f3dabda00"
+      "famono": {
+        "git": "https://github.com/raix/Meteor-famono.git",
+        "tag": "v0.0.27",
+        "commit": "0d159f4d558ec4ece4e0a27fc3a9cbe3a9e7fb0a"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
-        "tag": "v0.2.2",
-        "commit": "8bc53798fe5965669ae67c72f91829fcfdceabfd"
+        "tag": "v0.2.4",
+        "commit": "b40e9b0612329288d75cf52ad14a7da64bb8618f"
       },
       "just-i18n": {
         "git": "https://github.com/subhog/meteor-just-i18n.git",
@@ -81,19 +75,14 @@
         "commit": "91decfcf5b3b5e67f202a67658350b862330bf3d"
       },
       "accounts-t9n": {
-        "git": "https://github.com/Differential/meteor-accounts-t9n.git",
-        "branch": "fix-just-i18n",
-        "commit": "0e3f96d189b8cac3813b1f5a20a59115881f628d"
+        "git": "https://github.com/softwarerero/meteor-accounts-t9n.git",
+        "tag": "v0.0.3",
+        "commit": "d1710f979d6955459d9ce0374df81d22c3c6a6ab"
       },
       "minimongoid": {
         "git": "https://github.com/Exygy/minimongoid.git",
         "tag": "v0.8.3",
         "commit": "8a4849426f1775f9886f303067e50877696fae43"
-      },
-      "moment": {
-        "git": "https://github.com/acreeger/meteor-moment.git",
-        "tag": "v2.5.1",
-        "commit": "8c9bc5d3fc96705057737cb9743d555417f6e551"
       },
       "roles": {
         "git": "https://github.com/alanning/meteor-roles.git",
