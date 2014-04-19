@@ -10,10 +10,14 @@
 
 .splash-image{
 	width:100%;
-	background-size:100%;
 	height:auto;
 }
 
+.zephyrware-logo{
+	width:250px;
+	height:200px;
+	z-index: 100;
+}
 .center{
 	text-align: center;
 }

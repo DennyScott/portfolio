@@ -2,14 +2,6 @@ Meteor.subscribe('projects');
 Meteor.subscribe('profiles');
 
 Template.home.rendered = function () {
-	waypoints();
-	new WOW().init();
-
-		$('#test').waypoint(function(direction){
-			$('#test').waypoint('destroy');
-		}, {offset: '75%'});
-
-		fadeIn($('#home-content'));
 
 
 
@@ -19,50 +11,70 @@ Template.home.rendered = function () {
   require("famous/core/famous"); // Add the default css file
 
   // Basic deps
-  var Engine           = require("famous/core/Engine");
-  var Modifier         = require("famous/core/Modifier");
-  var RenderController = require("famous/views/RenderController");
+  var Engine             = require("famous/core/Engine");
+  var Modifier           = require("famous/core/Modifier");
+  var RenderController   = require("famous/views/RenderController");
+
 
   // Make sure dom got a body...
   Meteor.startup(function() {
     var Surface = require("famous/core/Surface"); // This one needs document.body
+      var View 			 = require('famous/core/View');
+  var Modifier			 = require('famous/core/Modifier');
+  var OptionsManager	 = require('famous/core/OptionsManager');
+  var RenderNode		 = require('famous/core/RenderNode');
+  var Utility			 = require('famous/utilities/Utility');
+  var RenderController   = require('famous/views/RenderController');
+  var NavigationBar		 = require('famous/widgets/NavigationBar');
+
+  var EdgeSwapper = require('famous/views/EdgeSwapper');
 
     var mainContext = Engine.createContext();
     var renderController = new RenderController();
     var Scrollview = require('famous/views/Scrollview');
     var splashimage = new Surface({
-             content: "Surface: ",
-             classes:['splash-image'],
-             size:[undefined, 1000],
-             properties: {
-                 background: "url('images/landscape.jpg')",
-                 textAlign: 'center',
-                 'background-size': '100%',
-                 width: '100%',
-                 height: '1000px',
-                 'background-repeat': 'no-repeat',
-                 'background-position': 'top center'
-             }
-        });
-    var scrollview = new Scrollview({
-    	direction:1
+    	classes:['splash-image'],
+    	size:[undefined, 1000],
+    	properties: {
+    		background: "url('images/landscape.jpg')",
+    		textAlign: 'center',
+    		'background-size': '100%',
+    		width: '100%',
+    		height: '1000px',
+    		'background-repeat': 'no-repeat',
+    		'background-position': 'top center'
+    	}
     });
-    var headerSurface = new Surface({
-            size:[undefined,100],
-            content:'<img width="100" class="header-image" src="' + 'images/logo.png' + '"/>',
-            classes:["header-bg"]
-        });
-	scrollview.sequenceFrom([splashimage,headerSurface]);
-    renderController.show(scrollview);
+
+    // create the content area
+    var content = new EdgeSwapper({
+    	inTransition: {curve: 'easeOutBounce', duration: 50000},
+    	overlap: false
+    });
+    // create the content area
+    var contentArea = new View();
+    var logo = new Surface({
+    	size: [undefined, undefined],
+    	content: '<h1>Zephyrware</h1><img class="zephyrware-logo" src="' + 'images/logo.png' + '"/>',
+    	properties: {
+    		lineHeight: '200px',
+    		textAlign: 'center',
+    		'background-repeat': 'no-repeat'
+    	}
+    });
+    contentArea.add(splashimage);
+    contentArea.add(content);
+    renderController.show(contentArea);
 
     // Engine.on("click", function() {
     //     var next = (counter++ + 1) % surfaces.length;
     //     this.show(surfaces[next]);
     // }.bind(renderController));
 
-    mainContext.add(renderController);
+mainContext.add(renderController);
+content.show(logo);
 
-  });
+});
 
 
 
